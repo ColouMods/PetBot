@@ -39,7 +39,7 @@ client.on('message', message => {
 	{
 	message.channel.sendMessage("NOOOOOOOOOOOOOOOO!");
 	}
-		else if (message.content.match(/hi/i))
+		else if (message.content.match(/hi/i)||message.content.match(/hey/i)||message.content.match(/hello/i))
 	{
 	message.channel.sendMessage("Hello.");
 	}
