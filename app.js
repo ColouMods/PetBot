@@ -6,6 +6,12 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i))
+	{
+    	message.channel.sendMessage("1% chance my ass.");
+    	}
+	
+	
   	if (message.content.match(/@PetBot/i))
 		if (message.content.match(/how are you/i))
 	{
