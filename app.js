@@ -63,7 +63,6 @@ client.on('message', message => {
 		message.channel.sendMessage("Hello.");
 		}
 	}
-	}
 		else if (message.content.match(/you suck/i))
 	{
 	message.channel.sendMessage("*sniff*");
