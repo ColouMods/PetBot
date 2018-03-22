@@ -7,13 +7,17 @@ client.on('ready', () => {
 
 client.on('message', message => {
   	if (message.content.match(/@PetBot/i))
-		if (message.content.match(/how are you today/i))
+		if (message.content.match(/how are you/i))
 	{
     	message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
     	}
-		else if (message.content.match(/wake up/i))
+		else if (message.content.match(/wake up/i)||message.content.match(/wake the fuck up/i))
 	{
 	message.channel.sendMessage("I *am* awake.");
+	}
+		else if (message.content.match(/get up/i)||message.content.match(/get the fuck up/i))
+	{
+	message.channel.sendMessage("I *am* up.");
 	}
 		else if (message.content.match(/what is the current ha release/i))
 	{
