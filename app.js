@@ -43,12 +43,13 @@ client.on('message', message => {
 	{
 		dadNum = (Math.floor(Math.random() * 100)+1);
 		if (dadNum == 1)
-    	{
+    		{
         	message.channel.sendMessage("Fuck me daddy.")
-    	}	
+    		}	
 		else
-	{
+		{
 		message.channel.sendMessage("NOOOOOOOOOOOOOOOO!");
+		}
 	}
 		else if (message.content.match(/hi/i)||message.content.match(/hey/i)||message.content.match(/hello/i))
 	{
