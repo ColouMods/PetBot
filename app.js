@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content.match(/@PetBot/i))
-
+  {
   if (message.content.match(/How are you today?/i)
   {
   message.reply('Fine, a bit bored. I wish something exciting would happen...');
@@ -85,6 +85,7 @@ client.on('message', message => {
   
   else {
 	message.reply('You called?');
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
