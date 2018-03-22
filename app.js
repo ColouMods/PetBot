@@ -53,7 +53,16 @@ client.on('message', message => {
 	}
 		else if (message.content.match(/hi/i)||message.content.match(/hey/i)||message.content.match(/hello/i))
 	{
-	message.channel.sendMessage("Hello.");
+		hiNum = (Math.floor(Math.random() * 100)+1);
+		if (hiNum == 1)
+    		{
+        	message.channel.sendMessage("You suck.")
+    		}	
+		else
+		{
+		message.channel.sendMessage("Hello.");
+		}
+	}
 	}
 		else if (message.content.match(/you suck/i))
 	{
