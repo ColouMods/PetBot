@@ -17,7 +17,7 @@ client.on('message', message => {
 	}
 		else if (message.content.match(/what is the current ha release/i))
 	{
-    	message.channel.sendMessage("The current release is Beta 4.8");
+    	message.channel.sendMessage("The current release is 1.0, and probably will be for quite a while.");
     	}
 		else if (message.content.match(/shut up/i))
 	{
