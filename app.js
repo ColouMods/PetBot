@@ -13,7 +13,7 @@ client.on('message', message => {
     	}
 		else if (message.content.match(/wake up/i))
 	{
-	message.channel.sendMessage("I *am* awake");
+	message.channel.sendMessage("I *am* awake.");
 	}
 		else if (message.content.match(/what is the current ha release/i))
 	{
@@ -21,7 +21,7 @@ client.on('message', message => {
     	}
 		else if (message.content.match(/shut up/i))
 	{
-	message.channel.sendMessage("*sniff* Will do...master");
+	message.channel.sendMessage("*sniff* Will do...master.");
 	}
 	    	else if (message.content.match(/play my mod/i)) 
     	{
@@ -41,7 +41,7 @@ client.on('message', message => {
 	}
 		else if (message.content.match(/dhi/i))
 	{
-	message.channel.sendMessage("Hello");
+	message.channel.sendMessage("Hello.");
 	}
 		else if (message.content.match(/you suck/i))
 	{
@@ -57,19 +57,19 @@ client.on('message', message => {
 	}
 		else if (message.content.match(/who is the best member of buzz team/i))
 	{
-	message.channel.sendMessage("Colou");
+	message.channel.sendMessage("Colou.");
 	}
 		else if (message.content.match(/who is the best member of donut team/i))
 	{
-	message.channel.sendMessage("Kenny Giles");
+	message.channel.sendMessage("Kenny Giles.");
 	}
 		else if (message.content.match(/who is the best member of bagel team/i))
 	{
-	message.channel.sendMessage("Genny Kiles");
+	message.channel.sendMessage("Genny Kiles.");
 	}
 		else if (message.content.match(/what is your favorite mod/i))
 	{
-	message.channel.sendMessage("Sunday Drive, made by **@Colou**");
+	message.channel.sendMessage("Sunday Drive, made by **@Colou**.");
 	}
 		else if (message.content.match(/command list/i))
 	{
@@ -77,11 +77,11 @@ client.on('message', message => {
 	}
 		else if (message.content.match(/who fixed you/i))
 	{
-	message.channel.sendMessage("**Literally Satan™**");
+	message.channel.sendMessage("**Literally Satan™**.");
 	}
 	else if (message.content.match(/what time is it/i))
 	{
-	message.channel.sendMessage("Time to go fuck yourself");
+	message.channel.sendMessage("Time to go fuck yourself.");
 	}
 		else 
 	{
