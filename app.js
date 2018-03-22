@@ -69,6 +69,10 @@ client.on('message', message => {
 		message.channel.sendMessage("Hello.");
 		}
 	}
+		else if (message.content.match(/blow me/i))
+	{
+    	message.channel.sendMessage("Later.");
+    	}
 		else if (message.content.match(/you suck/i))
 	{
 	message.channel.sendMessage("*sniff*");
