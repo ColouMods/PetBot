@@ -79,6 +79,10 @@ client.on('message', message => {
 	{
 	message.channel.sendMessage("**Literally Satan™**");
 	}
+	else if (message.content.match(/what time is it/i))
+	{
+	message.channel.sendMessage("Time to go fuck yourself");
+	}
 		else 
 	{
 	message.channel.sendMessage("You called?");
