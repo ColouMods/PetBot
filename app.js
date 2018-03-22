@@ -85,7 +85,6 @@ client.on('message', message => {
   
   else {
 	message.reply('You called?');
-  }
 });
 
 client.login(process.env.BOT_TOKEN);
