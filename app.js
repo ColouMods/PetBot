@@ -73,8 +73,16 @@ client.on('message', message => {
 		}
 	}
 		else if (message.content.match(/blow me/i))
-	{
-    	message.channel.sendMessage("Later.");
+		{
+		blowNum = (Math.floor(Math.random() * 25)+1);
+		if (blowNum == 1)
+    		{
+        	message.channel.sendMessage("Later.")
+    		}	
+		else
+		{
+		message.channel.sendMessage("No thanks.");
+		}
     	}
 		else if (message.content.match(/you suck/i))
 	{
