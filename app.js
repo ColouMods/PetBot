@@ -32,7 +32,7 @@
      	}
 		else if (message.content.match(/are you ok/i))
 	{
-    	message.channel.sendMessage("*♪I'm alright, don't nobody worry 'bout me.♪*");
+    	message.channel.sendMessage("♪ *I'm alright, don't nobody worry 'bout me.* ♪");
     	}
  		else if (message.content.match(/wake up/i)||message.content.match(/wake the fuck up/i))
  	{
