@@ -23,7 +23,7 @@ client.on('message', message => {
     		}	
 	}
 	
-  	if (message.content.match(/@PetBot/i))
+  	if (message.content.match(/@PetBot/i) && !message.author.bot)
 		if (message.content.match(/how are you/i))
 	{
     	message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
