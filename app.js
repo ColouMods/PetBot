@@ -4,7 +4,12 @@
  client.on('ready', () => {
    console.log('I am ready!');
  });
- 
+	var time new Date()
+ 	if (time.getSeconds()==0)
+ 	{
+     	client.channels.find("general","welcome").send("Welcome!")
+     	}
+
  client.on('message', message => {
  	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i))
  	{
