@@ -17,8 +17,12 @@
   
   if (message.content.match(/cool it on the constant Steamed Hams references/i))
  	{
- 	message.reply("Bitch, I'll talk about Steamed Hams as much as I want.");
- 	}
+		steamNum = (Math.floor(Math.random() * 5)+1);
+		if (steamNum == 1)
+    		{
+        	message.channel.sendMessage("Bitch, I'll talk about Steamed Hams as much as I want.");
+    		}	
+	 }
  	
  	
    	if (message.content.match(/@PetBot/i))
