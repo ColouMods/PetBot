@@ -10,20 +10,22 @@ client.on('message', message => {
 	{
     	message.channel.sendMessage("1% chance my ass.");
     	}
+	
 	if (message.content.match(/petbot is overrated/i))
 	{
 	message.reply("Yeah, fuck you too, pal.");
 	}
+	
 	if (message.content.match(/cool it on the constant Steamed Hams references/i))
 	{
-		dadNum = (Math.floor(Math.random() * 5)+1);
-		if (dadNum == 1)
+		steamNum = (Math.floor(Math.random() * 5)+1);
+		if (steamNum == 1)
     		{
         	message.channel.sendMessage("Bitch, I'll talk about Steamed Hams as much as I want.");
     		}	
 	}
 	
-  	if (message.content.match(/@PetBot/i) && !message.author.bot)
+  	if (message.content.match(/@PetBot/i))
 		if (message.content.match(/how are you/i))
 	{
     	message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
