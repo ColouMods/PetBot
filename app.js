@@ -14,8 +14,8 @@
  	{
  	message.reply("Yeah, fuck you too, pal.");
  	}
--	if (message.content.match(/cool it on the steamed hams references/i))
-+	if (message.content.match(/cool it on the constant Steamed Hams references/i))
+  
+  if (message.content.match(/cool it on the constant Steamed Hams references/i))
  	{
  	message.reply("Bitch, I'll talk about Steamed Hams as much as I want.");
  	}
