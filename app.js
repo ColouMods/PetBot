@@ -50,7 +50,7 @@ client.on('message', message => {
 	}
 		else if (message.content.match(/i am your father/i))
 	{
-		dadNum = (Math.floor(Math.random() * 100)+1);
+		dadNum = (Math.floor(Math.random() * 50)+1);
 		if (dadNum == 1)
     		{
         	message.channel.sendMessage("Fuck me daddy.")
@@ -62,7 +62,7 @@ client.on('message', message => {
 	}
 		else if (message.content.match(/hi/i)||message.content.match(/hey/i)||message.content.match(/hello/i))
 	{
-		hiNum = (Math.floor(Math.random() * 50)+1);
+		hiNum = (Math.floor(Math.random() * 25)+1);
 		if (hiNum == 1)
     		{
         	message.channel.sendMessage("You suck.")
