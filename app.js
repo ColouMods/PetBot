@@ -20,7 +20,7 @@
 		steamNum = (Math.floor(Math.random() * 5)+1);
 		if (steamNum == 1)
     		{
-        	message.channel.sendMessage("Bitch, I'll talk about Steamed Hams as much as I want.");
+        	message.reply("Bitch, I'll talk about Steamed Hams as much as I want.");
     		}	
 	 }
  	
@@ -30,6 +30,10 @@
  	{
      	message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
      	}
+		else if (message.content.match(/are you ok/i))
+	{
+    	message.channel.sendMessage("*♪I'm alright, don't nobody worry 'bout me.♪*");
+    	}
  		else if (message.content.match(/wake up/i)||message.content.match(/wake the fuck up/i))
  	{
  	message.channel.sendMessage("I *am* awake.");
