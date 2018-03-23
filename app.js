@@ -10,7 +10,10 @@ client.on('message', message => {
 	{
     	message.channel.sendMessage("1% chance my ass.");
     	}
-	
+	if (message.content.match(/petbot is overrated/i))
+	{
+	message.channel.sendMessage("Yeah, fuck you too, pal.");
+	}
 	
   	if (message.content.match(/@PetBot/i))
 		if (message.content.match(/how are you/i))
