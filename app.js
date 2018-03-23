@@ -14,6 +14,11 @@ client.on('message', message => {
 	{
 	message.reply("Yeah, fuck you too, pal.");
 	}
+	if (message.content.match(/cool it on the steamed hams references/i))
+	{
+	message.reply("Bitch, I'll talk about Steamed Hams as much as I want.");
+	}
+	
 	
   	if (message.content.match(/@PetBot/i))
 		if (message.content.match(/how are you/i))
