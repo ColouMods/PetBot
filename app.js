@@ -12,7 +12,7 @@ client.on('message', message => {
     	}
 	if (message.content.match(/petbot is overrated/i))
 	{
-	message.channel.sendMessage("Yeah, fuck you too, pal.");
+	message.reply("Yeah, fuck you too, pal.");
 	}
 	
   	if (message.content.match(/@PetBot/i))
