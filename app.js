@@ -16,14 +16,21 @@ client.on('message', message => {
 	}
 	if (message.content.match(/cool it on the constant Steamed Hams references/i))
 	{
-	message.reply("Bitch, I'll talk about Steamed Hams as much as I want.");
+		dadNum = (Math.floor(Math.random() * 5)+1);
+		if (dadNum == 1)
+    		{
+        	message.channel.sendMessage("Bitch, I'll talk about Steamed Hams as much as I want.");
+    		}	
 	}
-	
 	
   	if (message.content.match(/@PetBot/i))
 		if (message.content.match(/how are you/i))
 	{
     	message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
+    	}
+		if (message.content.match(/are you ok/i))
+	{
+    	message.channel.sendMessage("*♪I'm alright, nobody worry 'bout me.♪*");
     	}
 		else if (message.content.match(/wake up/i)||message.content.match(/wake the fuck up/i))
 	{
