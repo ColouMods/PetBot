@@ -5,6 +5,7 @@
    console.log('I am ready!');
  });
 greet = ["Hello.", "Hi."];
+mention = ["You called?", "Yeah?", "What do you need?"];
 client.on('message', message => {
  	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i))
  	{
@@ -140,7 +141,7 @@ client.on('message', message => {
  	}
  		else 
  	{
- 	message.channel.sendMessage("You called?");
+ 	message.channel.sendMessage(mention[Math.floor(Math.random() * 3)]);
  	}
      return;
  });
