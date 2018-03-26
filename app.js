@@ -27,7 +27,7 @@ client.on('message', message => {
 	 }
  	
  	
-   	if (message.content.match(/@PetBot/i))
+   	if (message.content.match(/@PetBot/i)) {
 		if (message.content.match(/sorry/i))
  	{
      	message.channel.sendMessage(sorry[Math.floor(Math.random() * 5)]);
