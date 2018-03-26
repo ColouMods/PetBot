@@ -33,6 +33,10 @@
   	  {
       message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
       }
+      else if (message.content.match(/sorry/i))
+ 	    {
+     	message.channel.sendMessage(sorry[Math.floor(Math.random() * 5)]);
+     	}
  		  else if (message.content.match(/are you ok/i))
  	    {
      	message.channel.sendMessage("♪ *I'm alright, don't nobody worry 'bout me.* ♪");
