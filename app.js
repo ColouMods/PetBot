@@ -28,26 +28,30 @@
   	
   	
     	if (message.content.match(/@PetBot/i))
+      if (message.content.match(/sorry/i))
+ 	    {
+     	message.channel.sendMessage(sorry[Math.floor(Math.random() * 5)]);
+     	}
   		if (message.content.match(/how are you/i))
-  	{
-      	message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
-      	}
- 		else if (message.content.match(/are you ok/i))
- 	{
+  	  {
+      message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
+      }
+ 		  else if (message.content.match(/are you ok/i))
+ 	    {
      	message.channel.sendMessage("♪ *I'm alright, don't nobody worry 'bout me.* ♪");
      	}
   		else if (message.content.match(/wake up/i)||message.content.match(/wake the fuck up/i))
-  	{
-  	message.channel.sendMessage("I *am* awake.");
-  	}
+  	  {
+  	  message.channel.sendMessage("I *am* awake.");
+  	  }
   		else if (message.content.match(/get up/i)||message.content.match(/get the fuck up/i))
-  	{
-  	message.channel.sendMessage("I *am* up.");
-  	}
+  	  {
+  	  message.channel.sendMessage("I *am* up.");
+  	  }
   		else if (message.content.match(/what is the current ha release/i))
-  	{
-      	message.channel.sendMessage("The current release is 1.0, and probably will be for quite a while.");
-      	}
+  	  {
+      message.channel.sendMessage("The current release is 1.0, and probably will be for quite a while.");
+      }
   		else if (message.content.match(/shut up/i))
   	{
   	message.channel.sendMessage("*sniff* Will do...master.");
