@@ -1,4 +1,4 @@
-     const Discord = require('discord.js');
+   const Discord = require('discord.js');
    const client = new Discord.Client();
    
    client.on('ready', () => {
@@ -35,8 +35,8 @@
        }
       else if (message.content.match(/sorry/i))
  	    {
-    	message.channel.sendMessage(sorry[Math.floor(Math.random() * 5)]);
-    	}
+     	message.channel.sendMessage(sorry[Math.floor(Math.random() * 5)]);
+     	}
   		  else if (message.content.match(/are you ok/i))
   	    {
       	message.channel.sendMessage("♪ *I'm alright, don't nobody worry 'bout me.* ♪");
@@ -140,17 +140,3 @@
    		else if (message.content.match(/who fixed you/i))
    	{
    	message.channel.sendMessage("**Literally Satan™**.");
-   	}
-   	else if (message.content.match(/what time is it/i))
-   	{
-   	message.channel.sendMessage("Time to go fuck yourself.");
-   	}
-   		else 
-   	{
-   	message.channel.sendMessage(mention[Math.floor(Math.random() * 3)]);
-   	}
-       return;
-   });
-   
-   // THIS  MUST  BE  THIS  WAY
-   client.login(process.env.BOT_TOKEN);
