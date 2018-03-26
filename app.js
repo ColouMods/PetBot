@@ -6,6 +6,7 @@
  });
 greet = ["Hello.", "Hi."];
 mention = ["You called?", "Yeah?", "What do you need?"];
+sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
 client.on('message', message => {
  	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i))
  	{
@@ -27,6 +28,10 @@ client.on('message', message => {
  	
  	
    	if (message.content.match(/@PetBot/i))
+		if (message.content.match(/sorry/i))
+ 	{
+     	message.channel.sendMessage(sorry[Math.floor(Math.random() * 5)]);
+     	}
  		if (message.content.match(/how are you/i))
  	{
      	message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
