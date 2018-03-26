@@ -12,7 +12,7 @@ client.on('message', message => {
      	}
  	if (message.content.match(/petbot is overrated/i))
  	{
- 	message.reply("Yeah, fuck you too, pal.");
+ 	message.reply("Yeah, fuck you too, pal." + test[Math.floor(Math.random() * 4)+1]);
  	}
 	 
   if (message.content.match(/cool it on the constant Steamed Hams references/i))
