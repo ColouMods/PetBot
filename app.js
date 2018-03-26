@@ -8,6 +8,10 @@
  mention = ["You called?", "Yeah?", "What do you need?"];
  sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
  client.on('message', message => {
+    if (message.content === '@PetBot Have a conversation with Sparrow Bot.')
+    {
+        message.channel.send('@424679471077916682 Hi');
+        }
   	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i))
   	{
       	message.channel.sendMessage("1% chance my ass.");
