@@ -4,7 +4,7 @@
  client.on('ready', () => {
    console.log('I am ready!');
  });
-
+test = ["hi", "yo", "sup", "hello"];
  client.on('message', message => {
  	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i))
  	{
@@ -14,7 +14,16 @@
  	{
  	message.reply("Yeah, fuck you too, pal.");
  	}
-  
+  	for (i < test.length) {
+	if (message.content.match(/test[i]/i)) {
+		message.reply("intended behaviour");
+		i=0;
+		break;
+	}
+	i+=1;
+ }
+	 
+	 
   if (message.content.match(/cool it on the constant Steamed Hams references/i))
  	{
 		steamNum = (Math.floor(Math.random() * 5)+1);
