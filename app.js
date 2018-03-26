@@ -4,7 +4,7 @@
  client.on('ready', () => {
    console.log('I am ready!');
  });
-test = ["hi", "yo", "sup", "hello"];
+greet = ["Hello.", "Hi."];
 client.on('message', message => {
  	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i))
  	{
@@ -12,7 +12,7 @@ client.on('message', message => {
      	}
  	if (message.content.match(/petbot is overrated/i))
  	{
- 	message.reply("Yeah, fuck you too, pal." + test[Math.floor(Math.random() * 4)+1]);
+ 	message.reply("Yeah, fuck you too, pal.");
  	}
 	 
   if (message.content.match(/cool it on the constant Steamed Hams references/i))
@@ -83,7 +83,7 @@ client.on('message', message => {
      		}	
  		else
  		{
- 		message.channel.sendMessage("Hello.");
+ 		message.channel.sendMessage(greet[Math.floor(Math.random() * 2)]);
  		}
  	}
  		else if (message.content.match(/blow me/i))
