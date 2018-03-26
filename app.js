@@ -1,1 +1,1 @@
-COLOU FUCKING BROKE PETBOT
+PetBot is broken at the moment, try again later.
