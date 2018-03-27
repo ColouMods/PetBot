@@ -75,8 +75,7 @@
   	}
   		else if (message.content.match(/i am your father/i))
   	{
-  		dadNum = (Math.floor(Math.random() * 50)+1);
-  		if (dadNum == 1)
+  		if (message.author == 290486859480563713)
       		{
           	message.channel.sendMessage("Fuck me daddy.")
       		}	
