@@ -75,7 +75,7 @@
   	}
   		else if (message.content.match(/i am your father/i))
   	{
-  		if (message.author == 290486859480563713)
+  		if (message.author.id == 290486859480563713)
       		{
           	message.channel.sendMessage("Fuck me daddy.")
       		}	
