@@ -33,7 +33,7 @@
   	  {
       message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
       }
-      else if (message.content === 'have a conversation with sparrow bot.')
+      else if (message.content.match(/have a conversation with sparrow bot/i))
       {
       message.channel.send('<@424679471077916682> Hi');
       }
