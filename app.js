@@ -12,11 +12,15 @@
       {
       message.channel.send('<@424679471077916682> Hi');
       }
-   if (message.author.bot == true) {
+   if (message.author.bot == true) { 
        if (message.content === "Hi.") {
+       setTimeout(() => { 
        message.channel.send('How are you?');
+       }, 700); 
        } else if (message.content === "OK, I guess.") {
+       setTimeout(() => { 
        message.channel.send("That's nice.");
+       }, 700); 
        }
   
  }
