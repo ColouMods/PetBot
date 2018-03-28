@@ -14,13 +14,17 @@
       }
    if (message.author.bot == true) { 
        if (message.content === "Hi.") {
+       message.channel.startTyping();
        setTimeout(() => { 
        message.channel.send('How are you?');
-       }, 2000); 
+       }, 2000);
+       message.channel.stopTyping(true);
        } else if (message.content === "OK, I guess.") {
+       message.channel.startTyping();
        setTimeout(() => { 
        message.channel.send("That's nice.");
-       }, 2000); 
+       }, 2000);
+       message.channel.stopTyping(true);
        }
   
  }
