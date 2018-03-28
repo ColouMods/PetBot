@@ -16,11 +16,11 @@
        if (message.content === "Hi.") {
        setTimeout(() => { 
        message.channel.send('How are you?');
-       }, 700); 
+       }, 2000); 
        } else if (message.content === "OK, I guess.") {
        setTimeout(() => { 
        message.channel.send("That's nice.");
-       }, 700); 
+       }, 2000); 
        }
   
  }
