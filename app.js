@@ -14,9 +14,6 @@
       }
    if (message.author.bot == true) { 
        if (message.content === "Hi.") {
-       setTimeout(() => { 
-       console.log('pause');
-       }, 700);
        message.channel.startTyping();
        setTimeout(() => { 
        message.channel.send('How are you?');
