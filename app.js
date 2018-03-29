@@ -14,12 +14,16 @@
       }
    if (message.author.bot == true) { 
        if (message.content === "Hi.") {
+       setTimeout(() => {
+       }, 700);
        message.channel.startTyping();
        setTimeout(() => { 
        message.channel.send('How are you?');
        }, 2000);
        message.channel.stopTyping(true);
        } else if (message.content === "OK, I guess.") {
+       setTimeout(() => {
+       }, 700);
        message.channel.startTyping();
        setTimeout(() => { 
        message.channel.send("That's nice.");
