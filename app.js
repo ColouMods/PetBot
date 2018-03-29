@@ -15,7 +15,7 @@
    if (message.author.bot == true) { 
        if (message.content === "Hi.") {
        setTimeout(() => {
-       }, 700);
+       }, 1700);
        message.channel.startTyping();
        setTimeout(() => { 
        message.channel.send('How are you?');
@@ -23,7 +23,7 @@
        message.channel.stopTyping(true);
        } else if (message.content === "OK, I guess.") {
        setTimeout(() => {
-       }, 700);
+       }, 1700);
        message.channel.startTyping();
        setTimeout(() => { 
        message.channel.send("That's nice.");
