@@ -163,6 +163,12 @@
   	{
   	message.channel.sendMessage("**Literally Satan™**.");
   	}
+   else if (message.content.match(/say/i))
+   {
+       const sayMessage = args.join(" ");
+      	message.delete().catch(O_o=>{}); 
+	      message.channel.send(sayMessage);
+	  }
   	else if (message.content.match(/what time is it/i))
   	{
   	message.channel.sendMessage("Time to go fuck yourself.");
