@@ -131,7 +131,7 @@
   	{
   	message.channel.sendMessage("*sniff*");
   	}
-  		else if (message.content.match(/can i see your source code/i))
+  		else if (message.content.match(/see your source code/i))
   	{
   	message.channel.sendMessage("No way! You want to *copy* my source code?");
   	}
@@ -139,15 +139,15 @@
   	{
   	message.channel.sendMessage("Thanks!");
   	}
-  		else if (message.content.match(/who is the best member of buzz team/i))
+  		else if (message.content.match(/best member of buzz team/i))
   	{
   	message.channel.sendMessage("Colou.");
   	}
-  		else if (message.content.match(/who is the best member of donut team/i))
+  		else if (message.content.match(/best member of donut team/i))
   	{
   	message.channel.sendMessage("Kenny Giles.");
   	}
-  		else if (message.content.match(/who is the best member of bagel team/i))
+  		else if (message.content.match(/best member of bagel team/i))
   	{
   	message.channel.sendMessage("Genny Kiles.");
   	}
