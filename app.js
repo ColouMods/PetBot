@@ -163,7 +163,7 @@
   	{
   	message.channel.sendMessage("**Literally Satan™**.");
   	}
-  	else if (message.content.match(/what time is it/i))
+  	else if (message.content.match(/what time/i))
   	{
   	message.channel.sendMessage("Time to go fuck yourself.");
   	}
