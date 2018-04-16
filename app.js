@@ -151,7 +151,7 @@
   	{
   	message.channel.sendMessage("Genny Kiles.");
   	}
-  		else if (message.content.match(/your favorite mod/i) || (message.content.match(/your favourite mod/i))
+  		else if (message.content.match(/your favorite mod/i) || message.content.match(/your favourite mod/i))
   	{
   	message.channel.sendMessage("Sunday Drive, made by **@Colou**.");
   	}
@@ -169,7 +169,7 @@
   	}
   		else 
   	{
-  	message.channel.sendMessage(mention[Math.floor(Math.random() * 3)]);
+  	message.channel.sendMessage(mention[Math.floor(Math.random() * mention.length)]);
   	}
       return;
   });
