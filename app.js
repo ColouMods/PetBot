@@ -5,7 +5,7 @@
     console.log('I am ready!');
   });
  greet = ["Hello.", "Hi."];
- mention = ["You called?", "Yeah?", "What do you need?"];
+ mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi."];
  sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
  client.on('message', message => {
    if (message.content.match(/have a conversation with sparrow bot/i))
@@ -58,7 +58,7 @@
       }
       else if (message.content.match(/sorry/i))
  	    {
-     	message.channel.sendMessage(sorry[Math.floor(Math.random() * 5)]);
+     	message.channel.sendMessage(sorry[Math.floor(Math.random() * sorry.length)]);
      	}
  		  else if (message.content.match(/are you ok/i))
  	    {
