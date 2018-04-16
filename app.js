@@ -169,7 +169,7 @@
   	}
   		else 
   	{
-  	message.channel.sendMessage(mention[Math.floor(Math.random() * 3)]);
+  	message.channel.sendMessage(mention[Math.floor(Math.random() * mention.length)]);
   	}
       return;
   });
