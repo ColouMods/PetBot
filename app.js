@@ -151,7 +151,7 @@
   	{
   	message.channel.sendMessage("Genny Kiles.");
   	}
-  		else if (message.content.match(/what is your favorite mod/i))
+  		else if (message.content.match(/your favorite mod/i) || (message.content.match(/your favourite mod/i))
   	{
   	message.channel.sendMessage("Sunday Drive, made by **@Colou**.");
   	}
