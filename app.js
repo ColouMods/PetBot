@@ -94,12 +94,6 @@
   	}
   		else if (message.content.match(/i am your father/i))
   	{
-  		if (message.author.id == 290486859480563713)
-      		{
-          	message.channel.sendMessage("Fuck me daddy.")
-      		}	
-  		else
-  		{
   		message.channel.sendMessage("NOOOOOOOOOOOOOOOO!");
   		}
   	}
@@ -115,18 +109,6 @@
   		message.channel.sendMessage(greet[Math.floor(Math.random() * 2)]);
   		}
   	}
-  		else if (message.content.match(/blow me/i))
-  		{
-  		blowNum = (Math.floor(Math.random() * 25)+1);
-  		if (blowNum == 1)
-      		{
-          	message.channel.sendMessage("Later.")
-      		}	
-  		else
-  		{
-  		message.channel.sendMessage("No thanks.");
-  		}
-      	}
   		else if (message.content.match(/you suck/i))
   	{
   	message.channel.sendMessage("*sniff*");
