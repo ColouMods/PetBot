@@ -2,6 +2,7 @@
   const client = new Discord.Client();
 //horse  eses
 //come back online
+//petbot come back, you can blame it all on me
   client.on('ready', () => {
     console.log('I am ready!');
   });
