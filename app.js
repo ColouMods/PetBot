@@ -54,6 +54,9 @@ client.on('message', message => {
   	if (message.content.match(/@Pet🅱ot/i)) {
 		message.channel.sendMessage("Fuck off.");	
 	}
+	if (message.content.match(/@PetBoy/i)) {
+		message.channel.sendMessage("PetBot is a her name.");	
+	}
   	if (message.content.match(/@PetBot/i)) {
 
 		if (message.content.match(/how are you/i)) {
