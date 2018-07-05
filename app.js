@@ -79,8 +79,8 @@ client.on('message', message => {
 			message.channel.sendMessage("I *am* up.");
 		}
 		
-		else if (message.content.match(/what is the current ha release/i)) {
-			message.channel.sendMessage("The current release is 1.0, and probably will be for quite a while.");
+		else if (message.content.match(/what is the current acis release/i)) {
+			message.channel.sendMessage("Ask Sparrow Bot.");
 		}
 		
 		else if (message.content.match(/shut up/i)) {
@@ -88,8 +88,8 @@ client.on('message', message => {
 		}
   	    
 		else if (message.content.match(/play my mod/i)) {
-         	message.channel.sendMessage("I already did.");
-      	}
+         		message.channel.sendMessage("I already did.");
+      		}
   		
 		else if (message.content.match(/you talk too much/i)) {
 			message.channel.sendMessage("I think *you* talk too much!");
