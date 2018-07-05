@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 //just come back online, alright?
+//come back online please
 client.on('ready', () => {
     console.log('I am ready!');
 });
