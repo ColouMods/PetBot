@@ -9,8 +9,25 @@ client.on('ready', () => {
 
 //response arrays
 greet = ["Hello.", "Hi."];
-mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi."];
+mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi.", "Hey."];
 sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
+lyrics1 = [
+"Hey now, you're an all star. Get your game on, go pray...",
+"When I'm lonely, yeah I know I'm gonna lone...",
+"We're no strangers to love, you know the rules and so do I. A fulcrum mitten's wha-...",
+"It's not unusual to be loved by anyone, it's not unusual to have thumbs wi-...",
+"Your lights are on, but you're not home. Your dad is Ray Barone...",
+"In the town where I was born, lived a man who sold CDs..."
+];
+
+lyrics2 = [
+"That can't be right.",
+"I don't think that's how it goes.",
+"Is that right?",
+"I messed that up, didn't I?",
+"Dammit, I messed up."
+];
+
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "Goddamn meatball", "JPEG"];
 
 client.on('message', message => {
