@@ -4,7 +4,7 @@ const client = new Discord.Client();
 //come back online please
 client.on('ready', () => {
     console.log('I am ready!');
-    client.channels.get('447499927220781068').sendMessage("If you're reading this, it means one of three things. 1, I crashed. 2, I've updated. 3, Heroku decided to restart me.");
+    //client.channels.get('447499927220781068').sendMessage("If you're reading this, it means one of three things. 1, I crashed. 2, I've updated. 3, Heroku decided to restart me.");
 });
 
 //response arrays
@@ -62,10 +62,13 @@ client.on('message', message => {
 		if (message.content.match(/how are you/i)) {
 			message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
 		}
-		else if ((message.content.match(/it/i) && message.content.match(/testing time/i)) || (message.content.match(/it/i) && message.content.match(/time to test/i))) {
-			namerino = message.author.id
+		else if (
+			(message.content.match(/it/i) && message.content.match(/testing time/i)) ||
+			 (message.content.match(/it/i) && message.content.match(/time to test/i))
+		) {
 			message.channel.sendMessage("No, it is not.");	
 		}
+		
 		else if (message.content.match(/sorry/i)) {
 			message.channel.sendMessage(sorry[Math.floor(Math.random() * sorry.length)]);
 		}
@@ -148,7 +151,10 @@ client.on('message', message => {
 			message.channel.sendMessage("Genny Kiles.");
 		}
 		
-  		else if (message.content.match(/your favorite mod/i) || message.content.match(/your favourite mod/i)) {
+  		else if (
+			(message.content.match(/what/i) && message.content.match(/your favorite mod/i)) ||
+			(message.content.match(/what/i) && message.content.match(/your favourite mod/i))
+			) {
 			message.channel.sendMessage("Sunday Drive, made by **@Colou**.");
 		}
 		else if (message.content.match(/command list/i)) {
