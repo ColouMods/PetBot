@@ -98,7 +98,13 @@ client.on('message', message => {
 			message.channel.sendMessage("I think *you* talk too much!");
 		}
   		
-		else if (message.content.match(/do an impression of a robot/i)) {
+		else if (
+			(message.content.match(/do/i) && message.content.match(/impression of a robot/i)) ||
+			(message.content.match(/do/i) && message.content.match(/imitation of a robot/i)) ||
+			(message.content.match(/act like/i) && message.content.match(/robot/i)) ||
+			(message.content.match(/say beep boop/i)) ||
+			(message.content.match(/appropriate robot culture/i))
+		) {
 			message.channel.sendMessage("*Beep Boop* I am a robot *Boop Beep*");
 		}
   		
