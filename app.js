@@ -41,7 +41,7 @@ client.on('message', message => {
 	}
   	if (message.content.match(/petbot is overrated/i))
   	{
-  	message.reply("<@" + message.author.id + "> Yeah, fuck you too, pal.");
+  	message.channel.sendMessage("<@" + message.author.id + "> Yeah, fuck you too, pal.");
   	}
  	 
 	if (message.content.match(/cool it on the constant Steamed Hams references/i))
