@@ -11,7 +11,7 @@ client.on('ready', () => {
 greet = ["Hello.", "Hi."];
 mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi."];
 sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
-insult = ["halfwit", "absolute spoon", "bastard", "prick"];
+insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "Goddamn meatball", "JPEG"];
 
 client.on('message', message => {
 	if (message.content.match(/have a conversation with sparrow bot/i)) {
