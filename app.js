@@ -51,7 +51,9 @@ client.on('message', message => {
 			message.channel.sendMessage("@Loren Goodwin I'll talk about Steamed Hams wherever I want.");
 		}	
 	}
-  	
+  	if (message.content.match(/@Pet🅱ot/i)) {
+		message.channel.sendMessage("Fuck off.");	
+	}
   	if (message.content.match(/@PetBot/i)) {
 
 		if (message.content.match(/how are you/i)) {
