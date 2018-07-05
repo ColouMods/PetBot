@@ -63,7 +63,7 @@ client.on('message', message => {
 			message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
 		}
 		else if (message.content.match(/it's time to test/i)) {
-			message.channel.sendMessage("No, " + message.author.username + ", it is not.");	
+			message.channel.sendMessage("No, " + message.author.displayName + ", it is not.");	
 		}
 		else if (message.content.match(/sorry/i)) {
 			message.channel.sendMessage(sorry[Math.floor(Math.random() * sorry.length)]);
