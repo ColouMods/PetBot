@@ -4,7 +4,7 @@ const client = new Discord.Client();
 //come back online please
 client.on('ready', () => {
     console.log('I am ready!');
-    client.channels.get('447499927220781068').sendMessage("I'm back.");
+    client.channels.get('447499927220781068').sendMessage("If you're reading this, it means one of three things. 1, Homer broke me. 2, I've updated. 3, Heroku decided to restart me.");
 });
 
 //response arrays
