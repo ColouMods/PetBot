@@ -189,7 +189,7 @@ client.on('message', message => {
 		}
 		
 		else if (message.content.match(/sing/i) && message.content.match(/a song/i)) {
-			message.channel.sendMessage(lyrics1[Math.floor(Math.random() * lyrics1.length)] + " " + lyrics2[Math.floor(Math.random() * lyrics2.length)]);
+			message.channel.sendMessage("♪ *" + lyrics1[Math.floor(Math.random() * lyrics1.length)] + "* ♪ " + lyrics2[Math.floor(Math.random() * lyrics2.length)]);
 		}
 		else {
 			message.channel.sendMessage(mention[Math.floor(Math.random() * mention.length)]);
