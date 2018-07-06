@@ -18,7 +18,7 @@ lyrics1 = [
 "It's not unusual to be loved by anyone, it's not unusual to have thumbs wi-...",
 "Your lights are on, but you're not home. Your dad is Ray Barone...",
 "In the town where I was born, lived a man who sold CDs...",
-"Living easy, Butterfree. Season ti-..."
+"Living easy, Butterfree. Season tick-..."
 ];
 
 lyrics2 = [
