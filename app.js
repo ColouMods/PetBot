@@ -17,7 +17,8 @@ lyrics1 = [
 "We're no strangers to love, you know the rules and so do I. A fulcrum-mitten's wha-...",
 "It's not unusual to be loved by anyone, it's not unusual to have thumbs wi-...",
 "Your lights are on, but you're not home. Your dad is Ray Barone...",
-"In the town where I was born, lived a man who sold CDs..."
+"In the town where I was born, lived a man who sold CDs...",
+"Living easy, Butterfree. Season ti-..."
 ];
 
 lyrics2 = [
