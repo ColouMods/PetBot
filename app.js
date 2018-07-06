@@ -31,6 +31,18 @@ lyrics2 = [
 "Fuck."
 ];
 
+how1 = [
+"Fine, a bit bored.",
+"Fine, bit bored though.",
+"I'm fine, kind of bored though."
+];
+
+how2 = [
+"I wish something exciting would happen...",
+"I hope something exciting happens soon...",
+"I wonder if anything exciting is going to happen..."
+];
+
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
 client.on('message', message => {
@@ -81,7 +93,7 @@ client.on('message', message => {
   	if (message.content.match(/@PetBot/i)) {
 
 		if (message.content.match(/how are you/i)) {
-			message.channel.sendMessage("Fine, a bit bored. I wish something exciting would happen...");
+			message.channel.sendMessage(how1[Math.floor(Math.random() * how1.length)] + " " + how2[Math.floor(Math.random() * how2.length)]);
 		}
 		else if (
 			(message.content.match(/it/i) && message.content.match(/testing time/i)) ||
