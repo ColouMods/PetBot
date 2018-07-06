@@ -12,7 +12,7 @@ greet = ["Hello.", "Hi."];
 mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi.", "Hey."];
 sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
 lyrics1 = [
-"Hey now, you're an all star. Get your game on, go pray...",
+"Hey now, you're an all star. Get the show on, get p-...",
 "When I'm lonely, yeah I know I'm gonna lone...",
 "We're no strangers to love, you know the rules and so do I. A fulcrum-mitten's wha-...",
 "It's not unusual to be loved by anyone, it's not unusual to have thumbs wi-...",
@@ -26,7 +26,8 @@ lyrics2 = [
 "Is that right?",
 "I messed that up, didn't I?",
 "Damn, I messed up.",
-"That's uh, that's wrong, isn't it?"
+"That's uh, that's wrong, isn't it?",
+"Fuck."
 ];
 
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
