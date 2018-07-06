@@ -28,7 +28,7 @@ lyrics2 = [
 "Dammit, I messed up."
 ];
 
-insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "Goddamn meatball", "JPEG"];
+insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
 client.on('message', message => {
 	if (message.content.match(/have a conversation with sparrow bot/i)) {
