@@ -179,7 +179,7 @@ client.on('message', message => {
 		}
 	
 		else if (message.content.match(/best member of buzz team/i)) {
-			message.channel.sendMessage("Colou.");
+			message.channel.sendMessage("You mean 'Bad Team'?");
 		}
 	
 		else if (message.content.match(/best member of donut team/i)) {
