@@ -39,8 +39,7 @@ how1 = [
 
 how2 = [
 "I wish something exciting would happen...",
-"I hope something exciting happens soon...",
-"I wonder if anything exciting is going to happen..."
+"I hope something exciting happens soon..."
 ];
 
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
