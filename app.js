@@ -91,7 +91,6 @@ client.on('message', message => {
     		}
 			message.channel.sendMessage("Fuck off.");
 			fuckoff++;
-		}
 	}
 	if (message.content.match(/@PetBoy/i)) {
 		message.channel.sendMessage("PetBot is a her name.");	
