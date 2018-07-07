@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var fuckoff = 1;
 //just come back online, alright?
 //come back online please
 client.on('ready', () => {
@@ -89,8 +90,8 @@ client.on('message', message => {
 			fuckoff = 1;
 			return;
     		}
-			message.channel.sendMessage("Fuck off.");
-			fuckoff++;
+		message.channel.sendMessage("Fuck off.");
+		fuckoff++;
 	}
 	if (message.content.match(/@PetBoy/i)) {
 		message.channel.sendMessage("PetBot is a her name.");	
