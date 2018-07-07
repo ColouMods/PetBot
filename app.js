@@ -84,7 +84,14 @@ client.on('message', message => {
 		}	
 	}
   	if (message.content.match(/@Pet🅱ot/i)) {
-		message.channel.sendMessage("Fuck off.");	
+		if (fuckoff == 10) {
+       			message.channel.sendMessage("How many times do I have to tell you? FUCK. OFF.");
+			fuckoff = 1;
+			return;
+    		}
+			message.channel.sendMessage("Fuck off.");
+			fuckoff++;
+		}
 	}
 	if (message.content.match(/@PetBoy/i)) {
 		message.channel.sendMessage("PetBot is a her name.");	
