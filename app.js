@@ -85,7 +85,7 @@ client.on('message', message => {
 		}	
 	}
   	if (message.content.match(/@Pet🅱ot/i)) {
-		if (fuckoff == 10) {
+		if (fuckoff == 7) {
        			message.channel.sendMessage("How many times do I have to tell you? FUCK. OFF.");
 			fuckoff = 1;
 			return;
