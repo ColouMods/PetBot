@@ -73,7 +73,7 @@ client.on('message', message => {
 		} 
 }
 return;
-
+});
 
 client.on('message', message => {
 	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i)) {
