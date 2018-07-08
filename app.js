@@ -7,7 +7,7 @@ var mimicID;
 //come back online please
 client.on('ready', () => {
     console.log('I am ready!');
-    client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
+    //client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
 });
 
 //response arrays
@@ -52,7 +52,8 @@ h2 = [
 "You don't microwave salads",
 "I have run out of haikus",
 "The world is gonna roll you",
-"Minus one that's three, quick maths"
+"Minus one that's three, quick maths",
+"This Kong has a funny face"
 ];
 
 h3 = [
@@ -94,9 +95,9 @@ client.on('message', message => {
   				mimicID = member.id;
 				if (mimicID != 368365406223728641) {
 					mimicking=1;
-					message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
+					message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">.");
 				} else {
-					message.channel.sendMessage("🖕 Not mimicking myself. Ass.");
+					message.channel.sendMessage("🛑 I refuse to mimic myself.");
 					//I know you're going to want to change this, just needed something to test it with
 				}
 			} else {
