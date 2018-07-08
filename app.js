@@ -119,6 +119,10 @@ client.on('message', message => {
 			message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
 		}
 		
+		else if (message.content.startsWith("pet.recommendmod")) {
+			message.channel.sendMessage("Uh... This doesn't do anything yet and it's undocumented. Why did you ask me to do that?");	
+		}
+		
 		else if (message.content.startsWith("pet.legacy")) {
 			//Legacy stuff
 			if (message.content.match(/how are you/i)) {
