@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+conssdgffsdgt client = new Discord.Client();
 var fuckoff = 1;
 //just come back online, alright?
 //come back online please
