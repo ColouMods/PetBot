@@ -6,8 +6,8 @@ var mimicID;
 //just come back online, alright?
 //come back online please
 client.on('ready', () => {
-    console.log('I am ready!');
-    //client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
+	console.log('I am ready!');
+	//client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
 	client.users.get("290486859480563713").sendMessage("I hope this is the right person.");
 });
 
