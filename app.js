@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var fuckoff = 1;
+var mimicking = 0;
+var mimicID;
 //just come back online, alright?
 //come back online please
 client.on('ready', () => {
@@ -46,10 +48,23 @@ how2 = [
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
 client.on('message', message => {
+	if (mimicking == 1 && message.author.id == mimicID) {
+		var mimicMsg = message.content;
+		message.channel.sendMessage(mimicMsg);
+	}
+});
+
+client.on('message', message => {
 	if (message.content.startsWith("pet.")) {
 		if (message.content.startsWith("pet.mimic")) {
-		
-		//
+			member = message.mentions.members.first();
+  			mimicID = member.id;
+			mimicking=1;
+			message.channel.sendMessage("Hey, guess who's mimicking <@" + mimicID + ">? That's right, me!");
+		}
+		else if (message.content.startsWith("pet.stopmimic")) {
+			mimicking=0;
+			message.channel.sendMessage("Fine, I'll stop mimicking them.");
 		}
 		else if (message.content.startsWith("pet.legacy")) {
 			//Legacy stuff
