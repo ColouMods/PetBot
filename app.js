@@ -46,7 +46,7 @@ how2 = [
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
 client.on('message', message => {
-	if (message.content.startsWith("pb.")) {
+	if (message.content.startsWith("pet.")) {
 		message.channel.sendMessage("If you're reading this, `startsWith` is not deprecated. Good for `startsWith`?");
 		//
 	}
