@@ -60,11 +60,11 @@ client.on('message', message => {
 			member = message.mentions.members.first();
   			mimicID = member.id;
 			mimicking=1;
-			message.channel.sendMessage("Hey, guess who's mimicking <@" + mimicID + ">? That's right, me!");
+			message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
 		}
 		else if (message.content.startsWith("pet.stopmimic")) {
 			mimicking=0;
-			message.channel.sendMessage("Fine, I'll stop mimicking them.");
+			message.channel.sendMessage("❎ No longer mimicking.");
 		}
 		else if (message.content.startsWith("pet.legacy")) {
 			//Legacy stuff
