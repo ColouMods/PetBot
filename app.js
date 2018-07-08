@@ -34,6 +34,21 @@ lyrics2 = [
 "Fuck."
 ];
 
+h1 = [
+"It's hip to fuck bees",
+"I am not a horse."
+];
+
+h2 = [
+"I don't like Loren Goodwin."
+];
+
+h3 = [
+"I am not a horse.",
+"It's hip to fuck bees"
+];
+
+
 how1 = [
 "Fine, a bit bored.",
 "Fine, bit bored though.",
@@ -70,7 +85,9 @@ client.on('message', message => {
 				message.channel.sendMessage("❔ I wasn't mimicking anyone.");
 			}
 		}
-		
+		else if (message.content.startsWith("pet.haiku")) {
+			message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
+		}
 		
 		else if (message.content.startsWith("pet.legacy")) {
 			//Legacy stuff
