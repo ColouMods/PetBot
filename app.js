@@ -36,8 +36,7 @@ lyrics2 = [
 
 h1 = [
 "It's hip to fuck bees",
-"I am not a horse",
-"I hate everyone"
+"You fucking donut"
 ];
 
 h2 = [
@@ -47,12 +46,13 @@ h2 = [
 "Road Rage Returns is not good",
 "I drink from under the sink",
 "Cloou is a stupid bastard",
-"Eating is my favourite sport"
+"Eating is my favourite sport",
+"You don't microwave salads",
+"I have run out of haikus"
 ];
 
 h3 = [
 "I am not a horse",
-"It's hip to fuck bees",
 "I hate everyone"
 ];
 
