@@ -36,7 +36,8 @@ lyrics2 = [
 
 h1 = [
 "It's hip to fuck bees",
-"You fucking donut"
+"You fucking donut",
+"It's Liquid's birthday"
 ];
 
 h2 = [
