@@ -90,7 +90,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 	if (message.content.startsWith("pet.")) {
-		if (message.content.startsWith("pet.mimic")) {
+		if (message.content.startsWith("pet.mimic") && message.channel.type != "dm") {
 			if (message.mentions.members.size != 0) {
 				member = message.mentions.members.first();
   				mimicID = member.id;
@@ -104,6 +104,8 @@ client.on('message', message => {
 			} else {
 				message.channel.sendMessage("❔ You need to tell me who to mention.");
 			}
+		} else if (message.content.startsWith("pet.mimic") && message.channel.type == "dm") {
+			message.channel.send("🛑 If you're going to have me mimic someone, do so in a server.");
 		}
 		else if (message.content.startsWith("pet.stopmimic")) {
 			if (mimicking==1) {
