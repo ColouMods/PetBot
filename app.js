@@ -85,7 +85,7 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.content.startsWith("pet.")) {
 		if (message.content.startsWith("pet.mimic")) {
-			if (message.mentions.members != undefined) {
+			if (message.mentions.members.size != 0) {
 				member = message.mentions.members.first();
   				mimicID = member.id;
 				mimicking=1;
