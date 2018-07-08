@@ -46,6 +46,12 @@ how2 = [
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
 client.on('message', message => {
+	if (message.content.startsWith("pb.")) {
+		message.channel.sendMessage("If you're reading this, `startsWith` is not deprecated. Good for `startsWith`?");
+	}
+});
+
+client.on('message', message => {
 	if (message.content.match(/have a conversation with sparrow bot/i)) {
 	message.channel.send('<@424679471077916682> Hi');
 	}
@@ -66,7 +72,7 @@ client.on('message', message => {
 		} 
 }
 return;
-});
+
 
 client.on('message', message => {
 	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i)) {
