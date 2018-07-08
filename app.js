@@ -88,8 +88,12 @@ client.on('message', message => {
 			if (message.mentions.members.size != 0) {
 				member = message.mentions.members.first();
   				mimicID = member.id;
-				mimicking=1;
-				message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
+				if (mimicID != 368365406223728641) {
+					mimicking=1;
+					message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
+				} else {
+					message.channel.sendMessage("🖕 Not mimicking myself. Ass.");
+				}
 			} else {
 				message.channel.sendMessage("❔ You need to tell me who to mention.");
 			}
