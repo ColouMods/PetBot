@@ -47,8 +47,13 @@ insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillo
 
 client.on('message', message => {
 	if (message.content.startsWith("pet.")) {
-		message.channel.sendMessage("If you're reading this, `startsWith` is not deprecated. Good for `startsWith`?");
+		if (message.content.startsWith("pet.mimic")) {
+		
 		//
+		}
+		else {
+		message.channel.sendMessage
+		}
 	}
 });
 
