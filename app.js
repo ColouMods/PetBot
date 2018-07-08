@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-conssdgffsdgt client = new Discord.Client();
+const client = new Discord.Client();
 var fuckoff = 1;
 //just come back online, alright?
 //come back online please
@@ -231,6 +231,7 @@ client.on('message', message => {
 		message.channel.sendMessage("PetBot is a her name.");	
 	}
   	if (message.content.match(/@PetBot/i)) {
+		if (message.author.bot) return;
 		message.channel.sendMessage("The `@PetBot` commands are no longer supported and updated. If you wish to use them, use `pet.legacy` instead.");	
 	}
 });  
