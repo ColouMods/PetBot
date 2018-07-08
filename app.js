@@ -63,7 +63,7 @@ client.on('message', message => {
 			message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
 		}
 		else if (message.content.startsWith("pet.stopmimic")) {
-			if (mimicking=1) {
+			if (mimicking==1) {
 				mimicking=0;
 				message.channel.sendMessage("❎ No longer mimicking.");
 			} else {
