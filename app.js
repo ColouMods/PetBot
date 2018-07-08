@@ -85,10 +85,14 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.content.startsWith("pet.")) {
 		if (message.content.startsWith("pet.mimic")) {
-			member = message.mentions.members.first();
-  			mimicID = member.id;
-			mimicking=1;
-			message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
+			if (message.mentions.members != undefined) {
+				member = message.mentions.members.first();
+  				mimicID = member.id;
+				mimicking=1;
+				message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
+			} else {
+				message.channel.sendMessage("❔ You need to tell me who to mention.");
+			}
 		}
 		else if (message.content.startsWith("pet.stopmimic")) {
 			if (mimicking==1) {
