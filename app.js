@@ -37,7 +37,8 @@ lyrics2 = [
 h1 = [
 "It's hip to fuck bees",
 "You fucking donut",
-"It's Liquid's birthday"
+"It's Liquid's birthday",
+"Two plus two is four"
 ];
 
 h2 = [
@@ -49,7 +50,9 @@ h2 = [
 "Cloou is a stupid bastard",
 "Eating is my favourite sport",
 "You don't microwave salads",
-"I have run out of haikus"
+"I have run out of haikus",
+"The world is gonna roll you",
+"Minus one that's three, quick maths"
 ];
 
 h3 = [
@@ -58,7 +61,8 @@ h3 = [
 "You there, please send help",
 "I enjoy Smash Mouth",
 "Do not eat my shorts",
-"Unforgettable luncheon"
+"Unforgettable luncheon",
+"Please don't burn my toast"
 ];
 
 
