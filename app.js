@@ -36,16 +36,24 @@ lyrics2 = [
 
 h1 = [
 "It's hip to fuck bees",
-"I am not a horse."
+"I am not a horse",
+"I hate everyone"
 ];
 
 h2 = [
-"I don't like Loren Goodwin."
+"I don't like Loren Goodwin",
+"I am eating a baguette",
+"Sparrow Bot is annoying",
+"Road Rage Returns is not good",
+"I drink from under the sink",
+"Cloou is a stupid bastard",
+"Eating is my favourite sport"
 ];
 
 h3 = [
-"I am not a horse.",
-"It's hip to fuck bees"
+"I am not a horse",
+"It's hip to fuck bees",
+"I hate everyone"
 ];
 
 
