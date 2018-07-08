@@ -7,7 +7,7 @@ var mimicID;
 //come back online please
 client.on('ready', () => {
     console.log('I am ready!');
-    client.channels.get('447499927220781068').sendMessage("Cloou thinks this update will probably break me, so he temporarily readded this text so that he could tell.");
+    client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
 });
 
 //response arrays
