@@ -63,9 +63,15 @@ client.on('message', message => {
 			message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
 		}
 		else if (message.content.startsWith("pet.stopmimic")) {
-			mimicking=0;
-			message.channel.sendMessage("❎ No longer mimicking.");
+			if (mimicking=1) {
+				mimicking=0;
+				message.channel.sendMessage("❎ No longer mimicking.");
+			} else {
+				message.channel.sendMessage("❔ I wasn't mimicking anyone.");
+			}
 		}
+		
+		
 		else if (message.content.startsWith("pet.legacy")) {
 			//Legacy stuff
 			if (message.content.match(/how are you/i)) {
