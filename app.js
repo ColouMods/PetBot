@@ -167,6 +167,18 @@ client.on('message', message => {
 			else if (message.content.match(/sing/i) && message.content.match(/a song/i)) {
 				message.channel.sendMessage("♪ *" + lyrics1[Math.floor(Math.random() * lyrics1.length)] + "* ♪ " + lyrics2[Math.floor(Math.random() * lyrics2.length)]);
 			}
+			else if (message.content.match(/@Pet🅱ot/i)) {
+				if (fuckoff == 7) {
+       					message.channel.sendMessage("How many times do I have to tell you? FUCK. OFF.");
+					fuckoff = 1;
+					return;
+    				}
+				message.channel.sendMessage("Fuck off.");
+				fuckoff++;
+			}
+			else if (message.content.match(/@PetBoy/i)) {
+				message.channel.sendMessage("PetBot is a her name.");	
+			}
 			else {
 				message.channel.sendMessage(mention[Math.floor(Math.random() * mention.length)]);
 			}
@@ -179,7 +191,7 @@ client.on('message', message => {
 	}
 });
 
-client.on('message', message => {
+/*client.on('message', message => {
 	if (message.content.match(/have a conversation with sparrow bot/i)) {
 	message.channel.send('<@424679471077916682> Hi');
 	}
@@ -201,9 +213,10 @@ client.on('message', message => {
 }
 return;
 });
+*/
 
 client.on('message', message => {
-	if (message.content.match(/i hope you're prepared for an unforgettable cunt/i)) {
+	/*if (message.content.match(/i hope you're prepared for an unforgettable cunt/i)) {
 		message.channel.sendMessage("1% chance my ass.");
 	}
   	if (message.content.match(/petbot is overrated/i))
@@ -218,18 +231,7 @@ client.on('message', message => {
 			message.channel.sendMessage("@Loren Goodwin I'll talk about Steamed Hams wherever I want.");
 		}	
 	}
-  	if (message.content.match(/@Pet🅱ot/i)) {
-		if (fuckoff == 7) {
-       			message.channel.sendMessage("How many times do I have to tell you? FUCK. OFF.");
-			fuckoff = 1;
-			return;
-    		}
-		message.channel.sendMessage("Fuck off.");
-		fuckoff++;
-	}
-	if (message.content.match(/@PetBoy/i)) {
-		message.channel.sendMessage("PetBot is a her name.");	
-	}
+	*/
   	if (message.content.match(/@PetBot/i)) {
 		if (message.author.bot) return;
 		message.channel.sendMessage("The `@PetBot` commands are no longer supported and updated. If you wish to use them, use `pet.legacy` instead.");	
