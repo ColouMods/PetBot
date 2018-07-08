@@ -97,6 +97,7 @@ client.on('message', message => {
 					message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">");
 				} else {
 					message.channel.sendMessage("🖕 Not mimicking myself. Ass.");
+					//I know you're going to want to change this, just needed something to test it with
 				}
 			} else {
 				message.channel.sendMessage("❔ You need to tell me who to mention.");
