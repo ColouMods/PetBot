@@ -60,7 +60,7 @@ h3 = [
 "I hate everyone",
 "You there, please send help",
 "I enjoy Smash Mouth",
-"Do not eat my shorts",
+"Please don't eat my shorts",
 "Unforgettable luncheon",
 "Please don't burn my toast"
 ];
