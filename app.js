@@ -53,7 +53,8 @@ h2 = [
 
 h3 = [
 "I am not a horse",
-"I hate everyone"
+"I hate everyone",
+"You there, please send help"
 ];
 
 
