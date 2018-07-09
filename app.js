@@ -135,7 +135,6 @@ client.on('message', message => {
   				if (message.author.id == (devs[i])) {
 					isDev = 1;
 					if (mimicking==1) {
-						mimicking=0;
 						message.channel.sendMessage("❕ Currently mimicking <@" + mimicID + ">.");
 					} else {
 						message.channel.sendMessage("❔ I'm not mimicking anyone.");
