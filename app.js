@@ -129,7 +129,7 @@ client.on('message', message => {
 			}
 			isDev = 0;
 		}
-		else if (message.content.startsWith("pet.mimictarget")) {
+		else if (message.content.startsWith("pet.currentmimic")) {
 			for (var i = 0; i < devs.length; i++) {
   				if (message.author.id == (devs[i])) {
 					isDev = 1;
