@@ -3,6 +3,7 @@ const client = new Discord.Client();
 var fuckoff = 1;
 var mimicking = 0;
 var mimicID;
+var petID = 368365406223728641;
 //just come back online, alright?
 //come back online please
 client.on('ready', () => {
@@ -90,12 +91,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-	if (message.content.startsWith("pet.")) {
+	if (message.content.startsWith("pet.") && message.author.id != petID) {
 		if (message.content.startsWith("pet.mimic") && message.channel.type != "dm") {
 			if (message.mentions.members.size != 0) {
 				member = message.mentions.members.first();
   				mimicID = member.id;
-				if (mimicID != 368365406223728641) {
+				if (mimicID != petID) {
 					mimicking=1;
 					message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">.");
 				} else {
