@@ -3,6 +3,7 @@ const client = new Discord.Client();
 var fuckoff = 1;
 var mimicking = 0;
 var mimicID;
+var isDev;
 var petID = 368365406223728641;
 //just come back online, alright?
 //come back online please
@@ -112,6 +113,7 @@ client.on('message', message => {
 		else if (message.content.startsWith("pet.stopmimic")) {
 			for (var i = 0; i < devs.length; i++) {
   				if (message.author.id == (devs[i])) {
+					isDev = 1;
 					if (mimicking==1) {
 						mimicking=0;
 						message.channel.sendMessage("❎ No longer mimicking.");
@@ -119,9 +121,14 @@ client.on('message', message => {
 						message.channel.sendMessage("❔ I wasn't mimicking anyone.");
 					}
 				} else {
-					message.channel.sendMessage("🛑 This is a developer-only command.");
+					isDev = 0;
 				}
 			}
+			
+			if (isDev = 0) {
+				message.channel.sendMessage("🛑 This is a developer-only command.");	
+			}
+			isDev = 0;
 		}
 		else if (message.content.startsWith("pet.haiku")) {
 			message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
