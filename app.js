@@ -15,8 +15,7 @@ client.on('ready', () => {
 
 //response arrays
 greet = ["Hello.", "Hi."];
-devs = ["333710766706524167", "259458435484090369"];
-//"290486859480563713"
+devs = ["333710766706524167", "290486859480563713", "259458435484090369"];
 mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi.", "Hey."];
 sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
 lyrics1 = [
