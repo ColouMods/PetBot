@@ -83,7 +83,12 @@ how2 = [
 
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
-
+client.on('message', message => {
+	if (mimicking == 1 && message.author.id == mimicID) {
+		var mimicMsg = message.content;
+		message.channel.sendMessage(mimicMsg);
+	}
+});
 
 client.on('message', message => {
 	if (message.content.startsWith("pet.") && message.author.id != petID) {
@@ -283,13 +288,6 @@ client.on('message', message => {
 		else {
 		message.channel.sendMessage
 		}
-	}
-});
-
-client.on('message', message => {
-	if (mimicking == 1 && message.author.id == mimicID) {
-		var mimicMsg = message.content;
-		message.channel.sendMessage(mimicMsg);
 	}
 });
 
