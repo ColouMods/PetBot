@@ -117,11 +117,10 @@ client.on('message', message => {
 					if (mimicking==1) {
 						mimicking=0;
 						message.channel.sendMessage("❎ No longer mimicking.");
-						break;
 					} else {
 						message.channel.sendMessage("❔ I wasn't mimicking anyone.");
-						break;
 					}
+					break;
 				} else {
 					isDev = 0;
 				}
@@ -138,11 +137,10 @@ client.on('message', message => {
 					if (mimicking==1) {
 						mimicking=0;
 						message.channel.sendMessage("❕ Currently mimicking <@" + mimicID + ">.");
-						break;
 					} else {
 						message.channel.sendMessage("❔ I'm not mimicking anyone.");
-						break;
 					}
+					break;
 				} else {
 					isDev = 0;
 				}
