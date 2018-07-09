@@ -125,8 +125,7 @@ client.on('message', message => {
 					isDev = 0;
 				}
 			}
-			
-			if (isDev = 0) {
+			if (isDev == 0) {
 				message.channel.sendMessage("🛑 This is a developer-only command.");	
 			}
 			isDev = 0;
