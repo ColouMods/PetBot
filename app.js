@@ -14,6 +14,7 @@ client.on('ready', () => {
 
 //response arrays
 greet = ["Hello.", "Hi."];
+devs = ["333710766706524167", "290486859480563713", "259458435484090369"];
 mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi.", "Hey."];
 sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
 lyrics1 = [
@@ -109,11 +110,17 @@ client.on('message', message => {
 			message.channel.send("🛑 Can't mimic here.");
 		}
 		else if (message.content.startsWith("pet.stopmimic")) {
-			if (mimicking==1) {
-				mimicking=0;
-				message.channel.sendMessage("❎ No longer mimicking.");
-			} else {
-				message.channel.sendMessage("❔ I wasn't mimicking anyone.");
+			for (var i = 0; i < devs.length; i++) {
+  				if (message.author.id == (devs[i])) {
+					if (mimicking==1) {
+						mimicking=0;
+						message.channel.sendMessage("❎ No longer mimicking.");
+					} else {
+						message.channel.sendMessage("❔ I wasn't mimicking anyone.");
+					}
+				} else {
+					message.channel.sendMessage("🛑 This is a developer-only command.");
+				}
 			}
 		}
 		else if (message.content.startsWith("pet.haiku")) {
@@ -123,6 +130,10 @@ client.on('message', message => {
 		else if (message.content.startsWith("pet.recommendmod")) {
 			message.channel.sendMessage("Uh... This doesn't do anything yet and it's undocumented. Why did you ask me to do that?");	
 		}
+		
+		//else if (message.content.startsWith("pet.vote")) {
+		//	message.channel.sendMessage("Uh... This doesn't do anything yet and it's undocumented. Why did you ask me to do that?");	
+		//}
 		
 		else if (message.content.startsWith("pet.help")) {
 			const embed = {
