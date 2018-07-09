@@ -129,6 +129,25 @@ client.on('message', message => {
 			}
 			isDev = 0;
 		}
+		else if (message.content.startsWith("pet.mimictarget")) {
+			for (var i = 0; i < devs.length; i++) {
+  				if (message.author.id == (devs[i])) {
+					isDev = 1;
+					if (mimicking==1) {
+						mimicking=0;
+						message.channel.sendMessage("❕ Currently mimicking <@" + mimicID + ">.");
+					} else {
+						message.channel.sendMessage("❔ I'm not mimicking anyone.");
+					}
+				} else {
+					isDev = 0;
+				}
+			}
+			if (isDev == 0) {
+				message.channel.sendMessage("🛑 This is a developer-only command.");	
+			}
+			isDev = 0;
+		}
 		else if (message.content.startsWith("pet.haiku")) {
 			message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
 		}
