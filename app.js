@@ -54,6 +54,7 @@ h2 = [
 "I have run out of haikus",
 "The world is gonna roll you",
 "Minus one that's three, quick maths",
+"Unforgettable luncheon",
 "This Kong has a funny face"
 ];
 
@@ -63,7 +64,7 @@ h3 = [
 "You there, please send help",
 "I enjoy Smash Mouth",
 "Please don't eat my shorts",
-"Unforgettable luncheon",
+"Radical are dumb",
 "Please don't burn my toast"
 ];
 
@@ -98,13 +99,13 @@ client.on('message', message => {
 					mimicking=1;
 					message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">.");
 				} else {
-					message.channel.sendMessage("🛑 I refuse to mimic myself.");
+					message.channel.sendMessage("🛑 Can't mimic that user.");
 				}
 			} else {
-				message.channel.sendMessage("❔ You need to tell me who to mention.");
+				message.channel.sendMessage("❔ You need to tell me who to mimic.");
 			}
 		} else if (message.content.startsWith("pet.mimic") && message.channel.type == "dm") {
-			message.channel.send("🛑 If you're going to have me mimic someone, do so in a server.");
+			message.channel.send("🛑 Can't mimic here.");
 		}
 		else if (message.content.startsWith("pet.stopmimic")) {
 			if (mimicking==1) {
