@@ -135,7 +135,7 @@ client.on('message', message => {
   				if (message.author.id == (devs[i])) {
 					isDev = 1;
 					if (mimicking==1) {
-						message.channel.sendMessage("❕ Currently mimicking <@" + mimicID + ">.");
+						message.channel.sendMessage("✅ Currently mimicking <@" + mimicID + ">.");
 					} else {
 						message.channel.sendMessage("❔ I'm not mimicking anyone.");
 					}
@@ -174,6 +174,10 @@ client.on('message', message => {
 					{
 						"name": "pet.stopmimic",
 						"value": "Stops me mimicking anyone. Can only be used by my developers."
+					},
+					{
+						"name": "pet.currentmimic",
+						"value": "Shows the user currently being mimicked."
 					},
 					{
      						"name": "pet.haiku",
