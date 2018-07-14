@@ -10,80 +10,8 @@ var petID = 368365406223728641;
 client.on('ready', () => {
 	console.log('I am ready!');
 	//client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
-	//client.users.get("290486859480563713").sendMessage("I hope this is the right person.");
+	client.users.get("290486859480563713").sendMessage("🤔");
 });
-
-//response arrays
-greet = ["Hello.", "Hi."];
-devs = ["333710766706524167", "290486859480563713", "259458435484090369"];
-mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi.", "Hey."];
-sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
-lyrics1 = [
-"Hey now, you're an all star. Get the show on, get p-...",
-"When I'm lonely, yeah I know I'm gonna lone...",
-"We're no strangers to love, you know the rules and so do I. A fulcrum-mitten's wha-...",
-"It's not unusual to be loved by anyone, it's not unusual to have thumbs wi-...",
-"Your lights are on, but you're not home. Your dad is Ray Barone...",
-"In the town where I was born, lived a man who sold CDs...",
-"Living easy, Butterfree. Season tick-..."
-];
-
-lyrics2 = [
-"That can't be right.",
-"I don't think that's how it goes.",
-"Is that right?",
-"I messed that up, didn't I?",
-"Damn, I messed up.",
-"That's uh, that's wrong, isn't it?",
-"Fuck."
-];
-
-h1 = [
-"It's hip to fuck bees",
-"You fucking donut",
-"It's Liquid's birthday",
-"Two plus two is four"
-];
-
-h2 = [
-"I don't like Loren Goodwin",
-"I am eating a baguette",
-"Sparrow Bot is annoying",
-"Road Rage Returns is not good",
-"I drink from under the sink",
-"Cloou is a stupid bastard",
-"Eating is my favourite sport",
-"You don't microwave salads",
-"I have run out of haikus",
-"The world is gonna roll you",
-"Minus one that's three, quick maths",
-"Unforgettable luncheon",
-"This Kong has a funny face"
-];
-
-h3 = [
-"I am not a horse",
-"I hate everyone",
-"You there, please send help",
-"I enjoy Smash Mouth",
-"Please don't eat my shorts",
-"Radical are dumb",
-"Please don't burn my toast"
-];
-
-
-how1 = [
-"Fine, a bit bored.",
-"Fine, bit bored though.",
-"I'm fine, kind of bored though."
-];
-
-how2 = [
-"I wish something exciting would happen...",
-"I hope something exciting happens soon..."
-];
-
-insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
 client.on('message', message => {
 	if (mimicking == 1 && message.author.id == mimicID) {
@@ -350,8 +278,7 @@ client.on('message', message => {
 		if (message.author.bot) return;
 		message.channel.sendMessage("The `@PetBot` commands are no longer supported and updated. If you wish to use them, use `pet.legacy` instead.");	
 	}
-});  
-
+});
 
 const embed = {
 	"title": "__Help__",
@@ -380,6 +307,78 @@ const embed = {
 		}
 	]
 };
+
+//response arrays
+greet = ["Hello.", "Hi."];
+devs = ["333710766706524167", "290486859480563713", "259458435484090369"];
+mention = ["You called?", "Yeah?", "What do you need?", "What's up?", "Hi.", "Hey."];
+sorry = ["OK.", "Good.", "You'd better be sorry.", "I forgive you."];
+lyrics1 = [
+"Hey now, you're an all star. Get the show on, get p-...",
+"When I'm lonely, yeah I know I'm gonna lone...",
+"We're no strangers to love, you know the rules and so do I. A fulcrum-mitten's wha-...",
+"It's not unusual to be loved by anyone, it's not unusual to have thumbs wi-...",
+"Your lights are on, but you're not home. Your dad is Ray Barone...",
+"In the town where I was born, lived a man who sold CDs...",
+"Living easy, Butterfree. Season tick-..."
+];
+
+lyrics2 = [
+"That can't be right.",
+"I don't think that's how it goes.",
+"Is that right?",
+"I messed that up, didn't I?",
+"Damn, I messed up.",
+"That's uh, that's wrong, isn't it?",
+"Fuck."
+];
+
+h1 = [
+"It's hip to fuck bees",
+"You fucking donut",
+"It's Liquid's birthday",
+"Two plus two is four"
+];
+
+h2 = [
+"I don't like Loren Goodwin",
+"I am eating a baguette",
+"Sparrow Bot is annoying",
+"Road Rage Returns is not good",
+"I drink from under the sink",
+"Cloou is a stupid bastard",
+"Eating is my favourite sport",
+"You don't microwave salads",
+"I have run out of haikus",
+"The world is gonna roll you",
+"Minus one that's three, quick maths",
+"Unforgettable luncheon",
+"This Kong has a funny face"
+];
+
+h3 = [
+"I am not a horse",
+"I hate everyone",
+"You there, please send help",
+"I enjoy Smash Mouth",
+"Please don't eat my shorts",
+"Radical are dumb",
+"Please don't burn my toast"
+];
+
+
+how1 = [
+"Fine, a bit bored.",
+"Fine, bit bored though.",
+"I'm fine, kind of bored though."
+];
+
+how2 = [
+"I wish something exciting would happen...",
+"I hope something exciting happens soon..."
+];
+
+insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
