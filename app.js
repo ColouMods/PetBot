@@ -9,7 +9,7 @@ var petID = 368365406223728641;
 //come back online please
 client.on('ready', () => {
 	console.log('I am ready!');
-	client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
+	//client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
 	//client.users.get("290486859480563713").sendMessage("I hope this is the right person.");
 });
 
@@ -162,33 +162,6 @@ client.on('message', message => {
 		//}
 		
 		else if (message.content.startsWith("pet.help")) {
-			const embed = {
-				"title": "__Help__",
-  				"description": "These are all the available commands that I can do.",
- 				"color": 3447003,
-  				"fields": [
-					{
-						"name": "pet.mimic",
-						"value": "Makes me copy everything said by a certain user."
-					},
-					{
-						"name": "pet.stopmimic",
-						"value": "Stops me mimicking anyone. Can only be used by my developers."
-					},
-					{
-						"name": "pet.currentmimic",
-						"value": "Shows the user currently being mimicked."
-					},
-					{
-     						"name": "pet.haiku",
-      						"value": "Randomly generates a haiku."
- 					},
-					{
-						"name": "pet.legacy",
-						"value": "Old, outdated commands. There is no documentation currently on how they work."
-					}
-				]
-			};
 			message.channel.sendMessage({ embed });	
 		}
 		
@@ -378,5 +351,35 @@ client.on('message', message => {
 		message.channel.sendMessage("The `@PetBot` commands are no longer supported and updated. If you wish to use them, use `pet.legacy` instead.");	
 	}
 });  
+
+
+const embed = {
+	"title": "__Help__",
+	"description": "These are all the available commands that I can do.",
+ 	"color": 3447003,
+  	"fields": [
+		{
+			"name": "pet.mimic",
+			"value": "Makes me copy everything said by a certain user."
+		},
+		{
+			"name": "pet.stopmimic",
+			"value": "Stops me mimicking anyone. Can only be used by my developers."
+		},
+		{
+			"name": "pet.currentmimic",
+			"value": "Shows the user currently being mimicked."
+		},
+		{
+     			"name": "pet.haiku",
+      			"value": "Randomly generates a haiku."
+ 		},
+		{
+			"name": "pet.legacy",
+			"value": "Old, outdated commands. There is no documentation currently on how they work."
+		}
+	]
+};
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
