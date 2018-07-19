@@ -4,6 +4,7 @@ var fuckoff = 1;
 var mimicking = 0;
 var mimicID;
 var isDev;
+const prefix = "pet.";
 var petID = 368365406223728641;
 //just come back online, alright?
 //come back online please
@@ -21,8 +22,8 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-	if (message.content.startsWith("pet.") && message.author.id != petID) {
-		if (message.content.startsWith("pet.mimic") && message.channel.type != "dm") {
+	if (message.content.startsWith(prefix) && message.author.id != petID) {
+		if (message.content.startsWith(prefix+"mimic") && message.channel.type != "dm") {
 			if (message.mentions.users.size != 0) {
 				member = message.mentions.users.first();
   				mimicID = member.id;
@@ -35,10 +36,10 @@ client.on('message', message => {
 			} else {
 				message.channel.sendMessage("❔ You need to tell me who to mimic.");
 			}
-		} else if (message.content.startsWith("pet.mimic") && message.channel.type == "dm") {
+		} else if (message.content.startsWith(prefix+"mimic") && message.channel.type == "dm") {
 			message.channel.send("🛑 Can't mimic here.");
 		}
-		else if (message.content.startsWith("pet.stopmimic")) {
+		else if (message.content.startsWith(prefix+"stopmimic")) {
 			for (var i = 0; i < devs.length; i++) {
   				if (message.author.id == (devs[i])) {
 					isDev = 1;
@@ -58,7 +59,7 @@ client.on('message', message => {
 			}
 			isDev = 0;
 		}
-		else if (message.content.startsWith("pet.currentmimic")) {
+		else if (message.content.startsWith(prefix+"currentmimic")) {
 			for (var i = 0; i < devs.length; i++) {
   				if (message.author.id == (devs[i])) {
 					isDev = 1;
@@ -77,23 +78,23 @@ client.on('message', message => {
 			}
 			isDev = 0;
 		}
-		else if (message.content.startsWith("pet.haiku")) {
+		else if (message.content.startsWith(prefix+"haiku")) {
 			message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
 		}
 		
-		else if (message.content.startsWith("pet.recommendmod")) {
+		else if (message.content.startsWith(prefix+"recommendmod")) {
 			message.channel.sendMessage("Uh... This doesn't do anything yet and it's undocumented. Why did you ask me to do that?");	
 		}
 		
-		//else if (message.content.startsWith("pet.vote")) {
+		//else if (message.content.startsWith(prefix+"vote")) {
 		//	message.channel.sendMessage("Uh... This doesn't do anything yet and it's undocumented. Why did you ask me to do that?");	
 		//}
 		
-		else if (message.content.startsWith("pet.help")) {
+		else if (message.content.startsWith(prefix+"help")) {
 			message.channel.sendMessage({ embed });	
 		}
 		
-		else if (message.content.startsWith("pet.legacy")) {
+		else if (message.content.startsWith(prefix+"legacy")) {
 			//Legacy stuff
 			if (message.content.match(/how are you/i)) {
 				message.channel.sendMessage(how1[Math.floor(Math.random() * how1.length)] + " " + how2[Math.floor(Math.random() * how2.length)]);
