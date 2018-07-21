@@ -85,9 +85,9 @@ client.on('message', message => {
 		
 		else if (message.content.startsWith(prefix+"dothething")) {
 			message.channel.sendMessage("THING DOING INITIALISED");
-			client.user.setPresence({ status: 'online' });
+			client.user.setStatus('online')
 	    		setTimeout(() => { 
-				client.user.setPresence({ status: 'dnd' });
+				client.user.setStatus('dnd')
 			}, 2000);
 			
 		}
