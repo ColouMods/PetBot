@@ -12,6 +12,7 @@ client.on('ready', () => {
 	console.log('I am ready!');
 	//client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
 	client.users.get('290486859480563713').sendMessage("🤔");
+	
 });
 
 client.on('message', message => {
@@ -80,6 +81,17 @@ client.on('message', message => {
 		}
 		else if (message.content.startsWith(prefix+"haiku")) {
 			message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
+		}
+		
+		else if (message.content.startsWith(prefix+"dothething")) {
+			message.channel.sendMessage("THING DOING INITIALISED");
+			client.user.setPresence({ status: 'online' });
+	    		setTimeout(() => { 
+				client.user.setPresence({ status: 'idle' });
+				setTimeout(() => { 
+					client.user.setPresence({ status: 'online' });
+				}, 2000);
+			}, 2000);
 		}
 		
 		else if (message.content.startsWith(prefix+"recommendmod")) {
