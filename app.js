@@ -87,11 +87,9 @@ client.on('message', message => {
 			message.channel.sendMessage("THING DOING INITIALISED");
 			client.user.setPresence({ status: 'online' });
 	    		setTimeout(() => { 
-				client.user.setPresence({ status: 'offline' });
-				setTimeout(() => { 
-					client.user.setPresence({ status: 'online' });
-				}, 2000);
+				client.user.setPresence({ status: 'dnd' });
 			}, 2000);
+			
 		}
 		
 		else if (message.content.startsWith(prefix+"recommendmod")) {
