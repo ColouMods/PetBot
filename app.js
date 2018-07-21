@@ -92,6 +92,9 @@ client.on('message', message => {
 					client.user.setStatus('online')
 				}, 500);*/
 			}, 2000);
+			setTimeout(() => { 
+				client.user.setStatus('online')
+			}, 2000);
 		}
 		
 		else if (message.content.startsWith(prefix+"recommendmod")) {
