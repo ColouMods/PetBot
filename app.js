@@ -87,7 +87,7 @@ client.on('message', message => {
 			message.channel.sendMessage("THING DOING INITIALISED");
 			client.user.setPresence({ status: 'online' });
 	    		setTimeout(() => { 
-				client.user.setPresence({ status: 'idle' });
+				client.user.setPresence({ status: 'offline' });
 				setTimeout(() => { 
 					client.user.setPresence({ status: 'online' });
 				}, 2000);
