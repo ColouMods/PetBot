@@ -92,25 +92,6 @@ client.on('message', message => {
 					client.user.setStatus('online')
 				}, 500);
 			}, 500);
-			setTimeout(() => { 
-				client.user.setStatus('dnd')
-				setTimeout(() => { 
-					client.user.setStatus('online')
-				}, 500);
-			}, 500);
-			setTimeout(() => { 
-				client.user.setStatus('dnd')
-				setTimeout(() => { 
-					client.user.setStatus('online')
-				}, 500);
-			}, 500);
-			setTimeout(() => { 
-				client.user.setStatus('dnd')
-				setTimeout(() => { 
-					client.user.setStatus('online')
-				}, 500);
-			}, 500);
-			
 		}
 		
 		else if (message.content.startsWith(prefix+"recommendmod")) {
