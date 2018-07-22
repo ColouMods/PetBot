@@ -7,7 +7,7 @@ var isDev;
 var voting = 0;
 var yes = 0;
 var no = 0;
-
+var voteUser;
 
 const prefix = "pet.";
 var petID = 368365406223728641;
