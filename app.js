@@ -107,19 +107,19 @@ client.on('message', message => {
 			if (voting == 0) {
 				voteUser = message.author.id;
 				let voteTopic = args.slice(0).join(" ");
-				message.channel.sendMessage("✅ Vote now active: " + voteTopic);
+				message.channel.sendMessage("✅ Vote now active: **" + voteTopic + "**");
 				voting = 1;
 				yesVote = 1;
 				noVote = 0;
 			} else if (voting == 1) {
-				message.channel.sendMessage("🛑 There is already an active voting topic: " + voteTopic);
+				message.channel.sendMessage("🛑 There is already an active voting topic: **" + voteTopic + "**");
 			}
 		}
 		
 		if (command === 'endvote') {
 			if (message.author.id == voteUser) {
 				voting = 0;
-				message.channel.sendMessage("✅ Vote complete: " + voteTopic + "\n Yes: " + yesVote + " No: " + noVote);
+				message.channel.sendMessage("✅ Vote complete: **" + voteTopic + "**\n Yes: " + yesVote + " No: " + noVote);
 				yesVote = 0;
 				noVote = 0;
 			} else if (message.author.id != voteUser) {
