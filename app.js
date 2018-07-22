@@ -29,7 +29,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 	if (message.content.startsWith(prefix) && ((message.author.id==290486859480563713) || (message.author.id==333710766706524167) || (message.author.id==259458435484090369))); {
-		const args = message.content.slice(prefix.length).trim().split(/:+/g);
+		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
 		if ( (command === 'mimic') && (message.channel.type != "dm") ) {
 			if (message.mentions.users.size != 0) {
