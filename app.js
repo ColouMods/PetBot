@@ -9,6 +9,7 @@ var yesVote = 0;
 var noVote = 0;
 var voteUser;
 var voteTopic;
+hasVoted = ["pet"];
 
 const prefix = "pet.";
 var petID = 368365406223728641;
@@ -49,6 +50,11 @@ client.on('message', message => {
 		
 		if ( (command === 'mimic') && (message.channel.type == "dm") ) {
 			message.channel.send("🛑 Can't mimic here.");
+		}
+		
+		if (command === 'test') {
+			message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
+			hasVoted.push("test");
 		}
 		
 		if (command === 'stopmimic') {
