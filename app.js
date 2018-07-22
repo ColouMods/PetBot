@@ -120,7 +120,7 @@ client.on('message', message => {
 		if (command === 'endvote') {
 			if (message.author.id == voteUser) {
 				voting = 0;
-				message.channel.sendMessage("✅ Vote complete: **" + voteTopic + "**\n Yes: " + yesVote + " No: " + noVote);
+				message.channel.sendMessage("✅ Vote complete: **" + voteTopic + "**\n\n Yes: " + yesVote + " No: " + noVote);
 				yesVote = 0;
 				noVote = 0;
 			} else if (message.author.id != voteUser) {
@@ -128,6 +128,14 @@ client.on('message', message => {
 			}
 		}
 		
+		if (command === 'yes') {
+			yesVote++;
+		}
+		
+		if (command === 'no') {
+			noVote++;
+		}
+			
 		if (command === 'say') {
 			let sayChannel = args[0];
 			let text = args.slice(1).join(" ");
