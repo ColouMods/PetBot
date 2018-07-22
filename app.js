@@ -103,9 +103,24 @@ client.on('message', message => {
 			message.channel.sendMessage("🛑 These commands have left the building and died, probably while sitting on a toilet.");
 		}
 		
-		if ( (command === 'vote') && (voting == 0) ) {
-			let voteTopic = args.slice(0).join(" ");
-			message.channel.sendMessage(voteTopic);
+		if ( (command === 'vote') ) {
+			if (voting == 0) {
+				voteUser = message.author.id;
+				let voteTopic = args.slice(0).join(" ");
+				message.channel.sendMessage("✅ Vote now active: " + voteTopic);
+				voting = 1;
+			} else if (voting == 1) {
+				message.channel.sendMessage("🛑 There is already an active voting topic: " + voteTopic);
+			}
+		}
+		
+		if (command === 'endvote') {
+			if (message.author.id == voteUser) {
+				voting = 0;
+				message.channel.sendMessage("✅ Vote complete: " + voteTopic + "/n Yes: " + yes + " No: " + no);
+			} else if (message.author.id != voteUser) {
+				message.channel.sendMessage("🛑 You did not initialise this vote, and you may not end it.");
+			}
 		}
 		
 		if (command === 'say') {
