@@ -102,6 +102,12 @@ client.on('message', message => {
 		if (command === 'legacy') {
 			message.channel.sendMessage("🛑 These commands have left the building and died, probably while sitting on a toilet.");
 		}
+		
+		if ( (command === 'vote') && (voting == 0) ) {
+			let voteTopic = args.slice(0).join(" ");
+			message.channel.sendMessage(voteTopic);
+		}
+		
 		if (command === 'say') {
 			let sayChannel = args[0];
 			let text = args.slice(1).join(" ");
