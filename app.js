@@ -104,7 +104,7 @@ client.on('message', message => {
 		}
 		if (command === 'say') {
 			let sayChannel = args[0];
-			let text = args[1];
+			let text = args.slice(1).join(" ");
 			client.channels.get(sayChannel).sendMessage(text);
 		}
 	}
