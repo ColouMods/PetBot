@@ -4,6 +4,11 @@ var fuckoff = 1;
 var mimicking = 0;
 var mimicID;
 var isDev;
+var voting = 0;
+var yes = 0;
+var no = 0;
+
+
 const prefix = "pet.";
 var petID = 368365406223728641;
 //just come back online, alright?
