@@ -8,6 +8,7 @@ var voting = 0;
 var yesVote = 0;
 var noVote = 0;
 var voteUser;
+var voteTopic;
 
 const prefix = "pet.";
 var petID = 368365406223728641;
@@ -106,7 +107,7 @@ client.on('message', message => {
 		if ( (command === 'vote') ) {
 			if (voting == 0) {
 				voteUser = message.author.id;
-				let voteTopic = args.slice(0).join(" ");
+				voteTopic = args.slice(0).join(" ");
 				message.channel.sendMessage("✅ Vote now active: **" + voteTopic + "**");
 				voting = 1;
 				yesVote = 1;
