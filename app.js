@@ -117,7 +117,7 @@ client.on('message', message => {
 		if (command === 'endvote') {
 			if (message.author.id == voteUser) {
 				voting = 0;
-				message.channel.sendMessage("✅ Vote complete: " + voteTopic + "/n Yes: " + yes + " No: " + no);
+				message.channel.sendMessage("✅ Vote complete: " + voteTopic + "\n Yes: " + yes + " No: " + no + "");
 			} else if (message.author.id != voteUser) {
 				message.channel.sendMessage("🛑 You did not initialise this vote, and you may not end it.");
 			}
