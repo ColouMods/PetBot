@@ -5,8 +5,8 @@ var mimicking = 0;
 var mimicID;
 var isDev;
 var voting = 0;
-var yes = 0;
-var no = 0;
+var yesVote = 0;
+var noVote = 0;
 var voteUser;
 
 const prefix = "pet.";
@@ -109,6 +109,8 @@ client.on('message', message => {
 				let voteTopic = args.slice(0).join(" ");
 				message.channel.sendMessage("✅ Vote now active: " + voteTopic);
 				voting = 1;
+				yesVote = 1;
+				noVote = 0;
 			} else if (voting == 1) {
 				message.channel.sendMessage("🛑 There is already an active voting topic: " + voteTopic);
 			}
@@ -117,7 +119,9 @@ client.on('message', message => {
 		if (command === 'endvote') {
 			if (message.author.id == voteUser) {
 				voting = 0;
-				message.channel.sendMessage("✅ Vote complete: " + voteTopic + "\n Yes: " + yes + " No: " + no + "");
+				message.channel.sendMessage("✅ Vote complete: " + voteTopic + "\n Yes: " + yesVote + " No: " + noVote);
+				yesVote = 0;
+				noVote = 0;
 			} else if (message.author.id != voteUser) {
 				message.channel.sendMessage("🛑 You did not initialise this vote, and you may not end it.");
 			}
