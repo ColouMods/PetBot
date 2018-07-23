@@ -53,10 +53,9 @@ client.on('message', message => {
 			message.channel.send("🛑 Can't mimic here.");
 		}
 		
-		//if (command === 'test') {
-		//	message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
-		//	hasVoted.push("test");
-		//}
+		if (command === 'test') {
+			message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
+		}
 		
 		if (command === 'stopmimic') {
 			for (var i = 0; i < devs.length; i++) {
@@ -131,6 +130,7 @@ client.on('message', message => {
 				message.channel.sendMessage("✅ Vote complete: **" + voteTopic + "**\n\n Yes: " + yesVote + " No: " + noVote);
 				yesVote = 0;
 				noVote = 0;
+				hasVoted = [];
 			} else if (message.author.id != voteUser) {
 				message.channel.sendMessage("🛑 You did not initialise this vote.");
 			}
