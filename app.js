@@ -168,6 +168,11 @@ client.on('message', message => {
 			}
 		}
 			
+		if (command === 'nick') {
+			let nickname = args.slice(0).join(" ");
+			message.guild.members.get("petID").setNickname(nickname)
+		}
+		
 		if (command === 'say') {
 			let sayChannel = args[0];
 			let text = args.slice(1).join(" ");
