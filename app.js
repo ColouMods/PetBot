@@ -9,7 +9,8 @@ var yesVote = 0;
 var noVote = 0;
 var voteUser;
 var voteTopic;
-hasVoted = ["pet"];
+hasVoted = [];
+userVoted = 0;
 
 const prefix = "pet.";
 var petID = 368365406223728641;
@@ -19,7 +20,6 @@ client.on('ready', () => {
 	console.log('I am ready!');
 	//client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
 	client.users.get('290486859480563713').sendMessage("🤔");
-	client.user.setUsername("PetBot");
 	
 });
 
@@ -53,10 +53,10 @@ client.on('message', message => {
 			message.channel.send("🛑 Can't mimic here.");
 		}
 		
-		if (command === 'test') {
-			message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
-			hasVoted.push("test");
-		}
+		//if (command === 'test') {
+		//	message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
+		//	hasVoted.push("test");
+		//}
 		
 		if (command === 'stopmimic') {
 			for (var i = 0; i < devs.length; i++) {
@@ -119,6 +119,7 @@ client.on('message', message => {
 				voting = 1;
 				yesVote = 1;
 				noVote = 0;
+				hasVoted.push(message.author.id);
 			} else if (voting == 1) {
 				message.channel.sendMessage("🛑 There is already an active voting topic: **" + voteTopic + "**");
 			}
@@ -136,11 +137,35 @@ client.on('message', message => {
 		}
 		
 		if (command === 'yes') {
-			yesVote++;
+			for (var i = 0; i < hasVoted.length; i++) {
+  				if (message.author.id == (userVoted[i])) {
+					userVoted = 1;
+				} else {
+					userVoted = 0;
+				}
+			}
+			if (userVoted = 0) {
+			yesVote++;	
+			hasVoted.push(message.author.id);
+			} else {
+				message.channel.sendMessage("You have already voted.");
+			}
 		}
 		
 		if (command === 'no') {
-			noVote++;
+			for (var i = 0; i < hasVoted.length; i++) {
+  				if (message.author.id == (userVoted[i])) {
+					userVoted = 1;
+				} else {
+					userVoted = 0;
+				}
+			}
+			if (userVoted = 0) {
+			noVote++;	
+			hasVoted.push(message.author.id);
+			} else {
+				message.channel.sendMessage("You have already voted.");
+			}
 		}
 			
 		if (command === 'say') {
