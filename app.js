@@ -140,7 +140,7 @@ client.on('message', message => {
 		
 		if (command === 'yes') {
 			for (var i = 0; i < hasVoted.length; i++) {
-  				if (message.author.id == (userVoted[i])) {
+  				if (message.author.id == (hasVoted[i])) {
 					userVoted = 1;
 				} else {
 					userVoted = 0;
@@ -156,7 +156,7 @@ client.on('message', message => {
 		
 		if (command === 'no') {
 			for (var i = 0; i < hasVoted.length; i++) {
-  				if (message.author.id == (userVoted[i])) {
+  				if (message.author.id == (hasVoted[i])) {
 					userVoted = 1;
 				} else {
 					userVoted = 0;
