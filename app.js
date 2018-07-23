@@ -174,8 +174,11 @@ client.on('message', message => {
 			
 		if (command === 'nick') {
 			let newNick = args.slice(0).join(" ");
-			//message.guild.members.get(petID).setNickname(newNick);
-			message.guild.members.get(client.user).setNickname(newNick);
+			if (client.hasPermission('CHANGE_NICKNAME')) {
+				message.guild.members.get(client.user).setNickname(newNick);
+			} else {
+				message.channel.sendMessage("🛑 I do not have adequate permission..");
+			}
 		}
 		
 		if (command === 'say') {
