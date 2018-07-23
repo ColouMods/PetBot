@@ -162,7 +162,7 @@ client.on('message', message => {
 					userVoted = 0;
 				}
 			}
-			if (userVoted = 0) {
+			if (userVoted == 0) {
 			noVote++;	
 			hasVoted.push(message.author.id);
 			} else {
