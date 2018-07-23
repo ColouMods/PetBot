@@ -11,7 +11,7 @@ var voteUser;
 var voteTopic;
 hasVoted = [];
 userVoted = 0;
-
+//commit
 const prefix = "pet.";
 var petID = 368365406223728641;
 //just come back online, alright?
