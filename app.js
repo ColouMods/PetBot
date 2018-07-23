@@ -169,8 +169,9 @@ client.on('message', message => {
 		}
 			
 		if (command === 'nick') {
-			let nickname = args.slice(0).join(" ");
-			message.guild.members.get(petID).setNickname(nickname);
+			let newNick = args.slice(0).join(" ");
+			//message.guild.members.get(petID).setNickname(newNick);
+			message.guild.members.get(client.user).setNickname(newNick);
 		}
 		
 		if (command === 'say') {
