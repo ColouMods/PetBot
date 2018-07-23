@@ -108,7 +108,7 @@ client.on('message', message => {
 		}
 		
 		if (command === 'legacy') {
-			message.channel.sendMessage("🛑 These commands have left the building and died, probably while sitting on a toilet.");
+			message.channel.sendMessage("🛑 These commands are no longer supported.");
 		}
 		
 		if ( (command === 'vote') ) {
@@ -132,7 +132,7 @@ client.on('message', message => {
 				yesVote = 0;
 				noVote = 0;
 			} else if (message.author.id != voteUser) {
-				message.channel.sendMessage("🛑 You did not initialise this vote, and you may not end it.");
+				message.channel.sendMessage("🛑 You did not initialise this vote.");
 			}
 		}
 		
@@ -148,7 +148,7 @@ client.on('message', message => {
 			yesVote++;	
 			hasVoted.push(message.author.id);
 			} else {
-				message.channel.sendMessage("You have already voted.");
+				message.channel.sendMessage("🛑 You have already voted.");
 			}
 		}
 		
@@ -164,7 +164,7 @@ client.on('message', message => {
 			noVote++;	
 			hasVoted.push(message.author.id);
 			} else {
-				message.channel.sendMessage("You have already voted.");
+				message.channel.sendMessage("🛑 You have already voted.");
 			}
 		}
 			
@@ -198,8 +198,20 @@ const embed = {
       			"value": "Randomly generates a haiku."
  		},
 		{
-			"name": "pet.legacy",
-			"value": "Old, outdated commands. There is no documentation currently on how they work."
+			"name": "pet.vote",
+			"value": "Creates a poll that any users can vote in."
+		},
+		{
+			"name": "pet.yes",
+			"value": "Votes 'Yes' in the active poll."
+		},
+		{
+			"name": "pet.no",
+			"value": "Votes 'No' in the active poll."
+		},
+		{
+			"name": "pet.endvote",
+			"value": "Ends the active poll and shows the results."
 		}
 	]
 };
