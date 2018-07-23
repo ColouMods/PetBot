@@ -149,6 +149,7 @@ client.on('message', message => {
 			if (userVoted == 0) {
 			yesVote++;	
 			hasVoted.push(message.author.id);
+			message.channel.sendMessage("✅ Your vote has been added.");
 			} else {
 				message.channel.sendMessage("🛑 You have already voted.");
 			}
@@ -165,6 +166,7 @@ client.on('message', message => {
 			if (userVoted == 0) {
 			noVote++;	
 			hasVoted.push(message.author.id);
+			message.channel.sendMessage("✅ Your vote has been added.");
 			} else {
 				message.channel.sendMessage("🛑 You have already voted.");
 			}
