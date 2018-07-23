@@ -55,6 +55,7 @@ client.on('message', message => {
 		
 		if (command === 'test') {
 			message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
+			message.channel.sendMessage("userVote is currently " + userVoted);
 		}
 		
 		if (command === 'stopmimic') {
