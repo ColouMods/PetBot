@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var fuckoff = 1;
 var mimicking = 0;
 var mimicID;
 var isDev;
