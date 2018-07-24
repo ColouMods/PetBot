@@ -177,8 +177,7 @@ client.on('message', message => {
 				let newNick = args.slice(0).join(" ");
 				//if (guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
 				//if (1 == 1) {
-				if (message.guild.members.get(petID).hasPermission("MANAGE_NICKNAMES") &&
-				    message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
+				if ( message.guild.members.get(petID).hasPermission("MANAGE_NICKNAMES") && message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME") ) {
 					//message.guild.members.get(petID).setNickname(newNick);
 					message.channel.send("test");
 				} else {
