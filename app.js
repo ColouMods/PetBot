@@ -173,11 +173,17 @@ client.on('message', message => {
 		}
 			
 		if (command === 'nick') {
-			let newNick = args.slice(0).join(" ");
-			if (message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
-				message.guild.members.get(petID).setNickname(newNick);
+			if (message.channel.type != "dm") {
+				let newNick = args.slice(0).join(" ");
+				if (message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
+					//message.guild.members.get(petID).setNickname(newNick);
+					message.channel.sendMessage("🛑 This doesn't work for some reason.");
+				} else {
+					message.channel.sendMessage("🛑 I do not have adequate permission..");
+				}
 			} else {
-				message.channel.sendMessage("🛑 I do not have adequate permission..");
+				message.channel.sendMessage("🖕 Trying to trip me up by asking me to set my nickname in a DM?");
+				message.channel.sendMessage("🏓 You better believe that's a paddlin'.");
 			}
 		}
 		
