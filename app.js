@@ -175,7 +175,8 @@ client.on('message', message => {
 		if (command === 'nick') {
 			if (message.channel.type != "dm") {
 				let newNick = args.slice(0).join(" ");
-				if (message.member.hasPermission("CHANGE_NICKNAME");) {
+				//if (message.member.hasPermission("CHANGE_NICKNAME");) {
+				if (message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME");) {
 					//message.guild.members.get(petID).setNickname(newNick);
 					message.channel.sendMessage("🛑 This doesn't work for some reason.");
 				} else {
