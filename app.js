@@ -171,26 +171,26 @@ client.on('message', message => {
 			}
 		}
 			
-		if (command === 'nick') {
-			if (message.channel.type != "dm") {
-				let newNick = args.slice(0).join(" ");
-				//if (guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
-				//if (1 == 1) {
-				//if ( message.guild.members.get(petID).hasPermission("MANAGE_NICKNAMES") && message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME") ) {
-				if (client.member.hasPermission("CHANGE_NICKNAME")) {
-					//message.guild.members.get(petID).setNickname(newNick);
-					message.channel.send(client.member.id);
-					message.channel.send("test");
-				} else {
-					message.channel.sendMessage("🛑 I do not have adequate permission..");
-				}
-			} else {
-				message.channel.sendMessage("❔ Trying to trip me up by asking me to set my nickname in a DM?");
-				setTimeout(() => {
-					message.channel.sendMessage("🏓 You better believe that's a paddlin'.");
-				}, 3000);
-			}
-		}
+		//if (command === 'nick') {
+		//	if (message.channel.type != "dm") {
+		//		let newNick = args.slice(0).join(" ");
+		//		//if (guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
+		//		//if (1 == 1) {
+		//		//if ( message.guild.members.get(petID).hasPermission("MANAGE_NICKNAMES") && message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME") ) {
+		//		if (client.member.hasPermission("CHANGE_NICKNAME")) {
+		//			//message.guild.members.get(petID).setNickname(newNick);
+		//			message.channel.send(client.member.id);
+		//			message.channel.send("test");
+		//		} else {
+		//			message.channel.sendMessage("🛑 I do not have adequate permission..");
+		//		}
+		//	} else {
+		//		message.channel.sendMessage("❔ Trying to trip me up by asking me to set my nickname in a DM?");
+		//		setTimeout(() => {
+		//			message.channel.sendMessage("🏓 You better believe that's a paddlin'.");
+		//		}, 3000);
+		//	}
+		//}
 		
 		if (command === 'say') {
 			let sayChannel = args[0];
