@@ -185,7 +185,7 @@ client.on('message', message => {
 				message.channel.sendMessage("🖕 Trying to trip me up by asking me to set my nickname in a DM?");
 				setTimeout(() => {
 					message.channel.sendMessage("🏓 You better believe that's a paddlin'.");
-				}, 1310);
+				}, 3000);
 			}
 		}
 		
