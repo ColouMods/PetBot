@@ -177,9 +177,9 @@ client.on('message', message => {
 				//if (guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
 				//if (1 == 1) {
 				//if ( message.guild.members.get(petID).hasPermission("MANAGE_NICKNAMES") && message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME") ) {
-				if (message.member.hasPermission("KICK_MEMBERS")) {
+				if (client.member.hasPermission("KICK_MEMBERS")) {
 					//message.guild.members.get(petID).setNickname(newNick);
-					message.channel.send(message.member.id);
+					message.channel.send(client.member.id);
 					message.channel.send("test");
 				} else {
 					message.channel.sendMessage("🛑 I do not have adequate permission..");
