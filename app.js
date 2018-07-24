@@ -184,7 +184,7 @@ client.on('message', message => {
 					message.channel.sendMessage("🛑 I do not have adequate permission..");
 				}
 			} else {
-				message.channel.sendMessage("🖕 Trying to trip me up by asking me to set my nickname in a DM?");
+				message.channel.sendMessage("❔ Trying to trip me up by asking me to set my nickname in a DM?");
 				setTimeout(() => {
 					message.channel.sendMessage("🏓 You better believe that's a paddlin'.");
 				}, 3000);
