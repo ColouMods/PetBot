@@ -57,7 +57,7 @@ client.on('message', message => {
 			message.channel.sendMessage("userVote is currently " + userVoted);
 			client.user.setStatus('dnd');
 			setTimeout(() => { 
-				client.user.setStatus('idle');
+				client.user.setStatus('away');
 			}, 1000);
 			setTimeout(() => { 
 				client.user.setStatus('online');
