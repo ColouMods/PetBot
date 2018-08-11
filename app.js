@@ -57,8 +57,11 @@ client.on('message', message => {
 			message.channel.sendMessage("userVote is currently " + userVoted);
 			client.user.setStatus('dnd');
 			setTimeout(() => { 
-				client.user.setStatus('online');
+				client.user.setStatus('idle');
 			}, 1000);
+			setTimeout(() => { 
+				client.user.setStatus('online');
+			}, 2000);
 		}
 		
 		if (command === 'stopmimic') {
