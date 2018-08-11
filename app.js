@@ -18,8 +18,11 @@ var petID = 368365406223728641;
 client.on('ready', () => {
 	console.log('I am ready!');
 	//client.channels.get('447499927220781068').sendMessage("Hey hey! I'm endorsing a new update, kids, and this one isn't poisonous to anybody!");
-	client.users.get('290486859480563713').sendMessage("🤔");
-	
+	//client.users.get('290486859480563713').sendMessage("🤔");
+	client.user.setStatus('dnd');
+	setTimeout(() => { 
+		client.user.setStatus('online');
+	}, 1000);
 });
 
 client.on('message', message => {
