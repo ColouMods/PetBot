@@ -59,7 +59,6 @@ client.on('message', message => {
 			setTimeout(() => { 
 				client.user.setStatus('online');
 			}, 1000);
-			client.user.setStatus('dnd');
 		}
 		
 		if (command === 'stopmimic') {
