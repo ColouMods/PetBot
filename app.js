@@ -58,10 +58,10 @@ client.on('message', message => {
 			client.user.setStatus('dnd');
 			setTimeout(() => { 
 				//client.user.setStatus('idle');
-				setTimeout(() => { 
+				//setTimeout(() => { 
 					client.user.setStatus('online');
-				}, 1000);
-			//}, 1000);
+				//}, 1000);
+			}, 1000);
 		}
 		
 		if (command === 'stopmimic') {
