@@ -56,6 +56,7 @@ client.on('message', message => {
 			message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
 			message.channel.sendMessage("userVote is currently " + userVoted);
 			client.user.setStatus('dnd');
+			//commit
 			setTimeout(() => { 
 				//client.user.setStatus('idle');
 				//setTimeout(() => { 
