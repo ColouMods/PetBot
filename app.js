@@ -58,7 +58,7 @@ client.on('message', message => {
 			client.user.setStatus('dnd');
 			setTimeout(() => { 
 				client.user.setStatus('online');
-			}, 6000);
+			}, 1000);
 			client.user.setStatus('dnd');
 		}
 		
