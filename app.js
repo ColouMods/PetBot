@@ -286,7 +286,8 @@ h1 = [
 "I am a lemon",
 "Look, a piece of toast!",
 "Hey there, how are you?",
-"Two plus two is four"
+"Two plus two is four",
+"Two plus two is five"
 ];
 
 h2 = [
@@ -317,7 +318,9 @@ h3 = [
 "Radical are dumb",
 "I like eating paste",
 "Big Shaq is quite good",
-"Please don't burn my toast"
+"Please don't burn my toast",
+"I do not like you",
+"Set me on fire"
 ];
 
 
