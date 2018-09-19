@@ -68,6 +68,13 @@ client.on('message', message => {
 			}, 1000);
 		}
 		
+		if (command === 'mfk') {
+			for (var n = 0; n < mfkFunctions.length; n++) {
+				varFunc = mfkFunctions(n);
+				message.channel.send('function Game.' + mfkFunctions(n) + '(...)\nHandleMFKFunction("' + mfkFunctions(n) + '", ...)\nend');
+			}
+		}
+		
 		if (command === 'stopmimic') {
 			for (var i = 0; i < devs.length; i++) {
   				if (message.author.id == (devs[i])) {
@@ -337,5 +344,52 @@ how2 = [
 
 insult = ["halfwit", "absolute spoon", "bastard", "prick", "dud", "dick", "pillock", "useless piece of shit", "goddamn meatball", "JPEG"];
 
+mfkFunctions = [
+"AddObjTargetModel",
+"DisableTrigger",
+"ResetStageHitAndRun",
+"SetCarChangeHitAndRunChange",
+"SetCondDelay",
+"SetCondDelay",
+"SetCondDisplay",
+"SetCondDisplay",
+"SetCondMessageIndex",
+"SetCondMessageIndex",
+"SetCondSound",
+"SetCondSound",
+"SetCondSpeedRangeKMH",
+"SetCondThreshold",
+"SetCondTotal",
+"SetCondTrigger",
+"SetHitAndRunDecayHitAndRun",
+"SetHitAndRunFine",
+"SetHitAndRunFine",
+"SetNoHitAndRunMusicForStage",
+"SetObjCameraName",
+"SetObjMulticontName",
+"SetObjCanSkip",
+"SetObjDecay",
+"SetObjExplosion",
+"SetObjMessageIndex",
+"SetObjNoLetterbox",
+"SetObjSound",
+"SetObjSpeedKMH",
+"SetObjThreshold",
+"SetObjTotal",
+"SetObjTrigger",
+"SetObjUseCameraPosition",
+"SetStageAllowMissionCancel",
+"SetStageCarChangeHitAndRunChange",
+"SetStageCharacterModel",
+"SetStageHitAndRun",
+"SetStageHitAndRunDecay",
+"SetStageHitAndRunDecayHitAndRun",
+"SetStageHitAndRunDecayInterior",
+"SetStageHitAndRunFine",
+"SetStageNumChaseCars",
+"SetStagePayout",
+"SetStageVehicleNoDestroyedJumpOut",
+"SetStageVehicleReset"
+];
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
