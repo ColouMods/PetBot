@@ -70,7 +70,7 @@ client.on('message', message => {
 		
 		if (command === 'mfk') {
 			for (var i = 0; n < mfkFunctions.length; i++) {
-				message.channel.send('function Game.' + mfkFunctions(i) + '(...)\nHandleMFKFunction("' + mfkFunctions(i) + '", ...)\nend');
+				message.channel.send('function Game.565(...)\nHandleMFKFunction("565", ...)\nend');
 			}
 		}
 		
