@@ -69,8 +69,8 @@ client.on('message', message => {
 		}
 		
 		if (command === 'mfk') {
-			for (var n = 0; n < mfkFunctions.length; n++) {
-				message.channel.send('function Game.' + mfkFunctions(n) + '(...)\nHandleMFKFunction("' + mfkFunctions(n) + '", ...)\nend');
+			for (var i = 0; n < mfkFunctions.length; i++) {
+				message.channel.send('function Game.' + mfkFunctions(i) + '(...)\nHandleMFKFunction("' + mfkFunctions(i) + '", ...)\nend');
 			}
 		}
 		
