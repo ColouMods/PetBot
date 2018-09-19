@@ -69,9 +69,13 @@ client.on('message', message => {
 		}
 		
 		if (command === 'mfk') {
-			//for (var i = 0; n < mfkFunctions.length; i++) {
-				message.channel.send('function Game.565(...)\nHandleMFKFunction("565", ...)\nend');
-			//}
+			for (var i = 0; n < mfkFunctions.length; i++) {
+				var f=0;
+				if (message.author.id == 290486859480563713) {
+					message.channel.send('function Game.' + mfkFunctions(f) + '(...)\nHandleMFKFunction("' + mfkFunctions(f) + '", ...)\nend');
+					f++;
+				}
+			}
 		}
 		
 		if (command === 'stopmimic') {
