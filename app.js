@@ -68,11 +68,11 @@ client.on('message', message => {
 			}, 1000);
 		}
 		
-		if (command === 'mfk') {
-			for (var i = 0; i < mfkFunctions.length; i++) {
-				message.channel.send('function Game.' + mfkFunctions[i] + '(...)\nHandleMFKFunction(0,10,"' + mfkFunctions[i] + '", ...)\nend');
-			}
-		}
+		//if (command === 'mfk') {
+		//	for (var i = 0; i < mfkFunctions.length; i++) {
+		//		message.channel.send('function Game.' + mfkFunctions[i] + '(...)\nHandleMFKFunction(0,10,"' + mfkFunctions[i] + '", ...)\nend');
+		//	}
+		//}
 		
 		if (command === 'stopmimic') {
 			for (var i = 0; i < devs.length; i++) {
