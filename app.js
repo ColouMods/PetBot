@@ -214,6 +214,10 @@ client.on('message', message => {
 			let text = args.slice(1).join(" ");
 			client.channels.get(sayChannel).sendMessage(text);
 		}
+		
+		if (command === '') {
+			message.channel.sendMessage("❔ I don't recognize that command.");	
+		}
 	}
 });
 
