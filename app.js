@@ -215,9 +215,9 @@ client.on('message', message => {
 			client.channels.get(sayChannel).sendMessage(text);
 		}
 		
-		if (command === '') {
-			message.channel.sendMessage("❔ I don't recognize that command.");	
-		}
+		//if (command === '') {
+		//	message.channel.sendMessage("❔ I don't recognize that command.");	
+		//}
 	}
 });
 
