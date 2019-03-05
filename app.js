@@ -209,10 +209,15 @@ client.on('message', message => {
 		//	}
 		//}
 		
-		if (command === 'say') {
+		if (command === 'sayr') {
 			let sayChannel = args[0];
 			let text = args.slice(1).join(" ");
 			client.channels.get(sayChannel).sendMessage(text);
+		}
+		
+		if (command === 'say') {
+			let text = args.slice(0).join(" ");
+			message.channel.sendMessage(text);
 		}
 		
 		//if (command === '') {
