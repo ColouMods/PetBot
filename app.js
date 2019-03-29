@@ -133,9 +133,9 @@ client.on('message', message => {
 				voteTopic = args.slice(0).join(" ");
 				message.channel.sendMessage("✅ Vote now active: **" + voteTopic + "**");
 				voting = 1;
-				yesVote = 1;
+				yesVote = 0;
 				noVote = 0;
-				hasVoted.push(message.author.id);
+				//hasVoted.push(message.author.id);
 				userVoted = 0;
 			} else if (voting == 1) {
 				message.channel.sendMessage("🛑 There is already an active voting topic: **" + voteTopic + "**");
