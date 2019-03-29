@@ -157,34 +157,24 @@ client.on('message', message => {
 		if (command === 'yes') {
 			for (var i = 0; i < hasVoted.length; i++) {
   				if (message.author.id == (hasVoted[i])) {
-					userVoted = 1;
+					message.channel.sendMessage("🛑 You have already voted.");
 				} else {
-					userVoted = 0;
+					yesVote++;	
+					hasVoted.push(message.author.id);
+					message.channel.sendMessage("✅ Your vote has been added.");
 				}
-			}
-			if (userVoted == 0) {
-			yesVote++;	
-			hasVoted.push(message.author.id);
-			message.channel.sendMessage("✅ Your vote has been added.");
-			} else {
-				message.channel.sendMessage("🛑 You have already voted.");
 			}
 		}
 		
 		if (command === 'no') {
 			for (var i = 0; i < hasVoted.length; i++) {
   				if (message.author.id == (hasVoted[i])) {
-					userVoted = 1;
+					message.channel.sendMessage("🛑 You have already voted.");
 				} else {
-					userVoted = 0;
+					noVote++;	
+					hasVoted.push(message.author.id);
+					message.channel.sendMessage("✅ Your vote has been added.");
 				}
-			}
-			if (userVoted == 0) {
-			noVote++;	
-			hasVoted.push(message.author.id);
-			message.channel.sendMessage("✅ Your vote has been added.");
-			} else {
-				message.channel.sendMessage("🛑 You have already voted.");
 			}
 		}
 			
