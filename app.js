@@ -36,193 +36,202 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix)) {
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
-		if ( (command === 'mimic') && (message.channel.type != "dm") ) {
-			if (message.mentions.users.size != 0) {
-				member = message.mentions.users.first();
-				mimicID = member.id;
-				if (mimicID != petID) {
-					mimicking=1;
-					message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">.");
-				} else {
-					message.channel.sendMessage("🛑 Can't mimic that user.");
-				}
-			} else {
-				message.channel.sendMessage("❔ You need to tell me who to mimic.");
-			}
-		}
-		
-		if ( (command === 'mimic') && (message.channel.type == "dm") ) {
-			message.channel.send("🛑 Can't mimic here.");
-		}
-		
-		if (command === 'test') {
-			message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
-			message.channel.sendMessage("userVote is currently " + userVoted);
-			client.user.setStatus('dnd');
-			//commit
-			setTimeout(() => { 
-				//client.user.setStatus('idle');
-				//setTimeout(() => { 
-					client.user.setStatus('online');
-				//}, 1000);
-			}, 1000);
-		}
-		
-		//if (command === 'mfk') {
-		//	for (var i = 0; i < mfkFunctions.length; i++) {
-		//		message.channel.send('function Game.' + mfkFunctions[i] + '(...)\nHandleMFKFunction(0,10,"' + mfkFunctions[i] + '", ...)\nend');
-		//	}
-		//}
-		
-		if (command === 'stopmimic') {
-			for (var i = 0; i < devs.length; i++) {
-  				if (message.author.id == (devs[i])) {
-					isDev = 1;
-					if (mimicking==1) {
-						mimicking=0;
-						message.channel.sendMessage("❎ No longer mimicking.");
+		switch(command) {
+			case "mimic":
+				if message.channel.type != "dm" {
+					if (message.mentions.users.size != 0) {
+						member = message.mentions.users.first();
+						mimicID = member.id;
+						if (mimicID != petID) {
+							mimicking=1;
+							message.channel.sendMessage("✅ Mimicking <@" + mimicID + ">.");
+						} else {
+							message.channel.sendMessage("🛑 Can't mimic that user.");
+						}
 					} else {
-						message.channel.sendMessage("❔ I wasn't mimicking anyone.");
+						message.channel.sendMessage("❔ You need to tell me who to mimic.");
 					}
-					break;
 				} else {
-					isDev = 0;
+					message.channel.send("🛑 Can't mimic here.");
 				}
-			}
-			if (isDev == 0) {
-				message.channel.sendMessage("🛑 This is a developer-only command.");	
-			}
-			isDev = 0;
-		}
-		
-		if (command === 'mimictarget') {
-			for (var i = 0; i < devs.length; i++) {
-  				if (message.author.id == (devs[i])) {
-					isDev = 1;
-					if (mimicking==1) {
-						message.channel.sendMessage("✅ Currently mimicking <@" + mimicID + ">.");
-					} else {
-						message.channel.sendMessage("❔ I'm not mimicking anyone.");
-					}
-					break;
-				} else {
-					isDev = 0;
-				}
-			}
-			if (isDev == 0) {
-				message.channel.sendMessage("🛑 This is a developer-only command.");	
-			}
-			isDev = 0;
-		}
-		
-		if (command === 'haiku') {
-			message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
-		}
-		
-		if (command === 'help') {
-			message.channel.sendMessage({ embed });
-		}
-		
-		if (command === 'legacy') {
-			message.channel.sendMessage("🛑 These commands are no longer supported.");
-		}
-		
-		if ( (command === 'vote') ) {
-			if (voting == 0) {
-				voteUser = message.author.id;
-				voteTopic = args.slice(0).join(" ");
-				message.channel.sendMessage("✅ Vote now active: **" + voteTopic + "**");
-				voting = 1;
-				yesVote = 0;
-				noVote = 0;
-				//hasVoted.push(message.author.id);
-				hasVoted = [];
-			} else if (voting == 1) {
-				message.channel.sendMessage("🛑 There is already an active voting topic: **" + voteTopic + "**");
-			}
-		}
-		
-		if (command === 'endvote') {
-			if (message.author.id == voteUser) {
-				voting = 0;
-				message.channel.sendMessage("✅ Vote complete: **" + voteTopic + "**\n\n Yes: " + yesVote + " No: " + noVote);
-				yesVote = 0;
-				noVote = 0;
-				hasVoted = [];
-			} else if (message.author.id != voteUser) {
-				message.channel.sendMessage("🛑 You did not initialise this vote.");
-			}
-		}
-		
-		if (command === 'yes') {
-			for (var i = 0; i < hasVoted.length; i++) {
-  				if (message.author.id == (hasVoted[i])) {
-					userVoted = 1;
-				} else {
-					userVoted = 0;
-				}
-			}
-			if (userVoted == 0) {
-			yesVote++;
-			hasVoted.push(message.author.id);
-			message.channel.sendMessage("✅ Your vote has been added.");
-			} else {
-				message.channel.sendMessage("🛑 You have already voted.");
-			}
-		}
-		
-		if (command === 'no') {
-			for (var i = 0; i < hasVoted.length; i++) {
-  				if (message.author.id == (hasVoted[i])) {
-					userVoted = 1;
-				} else {
-					userVoted = 0;
-				}
-			}
-			if (userVoted == 0) {
-			noVote++;	
-			hasVoted.push(message.author.id);
-			message.channel.sendMessage("✅ Your vote has been added.");
-			} else {
-				message.channel.sendMessage("🛑 You have already voted.");
-			}
-		}
+				break;
+
+			case "test":
+				message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
+				message.channel.sendMessage("userVote is currently " + userVoted);
+				client.user.setStatus('dnd');
+				//commit
+				setTimeout(() => { 
+					//client.user.setStatus('idle');
+					//setTimeout(() => { 
+						client.user.setStatus('online');
+					//}, 1000);
+				}, 1000);
+				break;
 			
-		//if (command === 'nick') {
-		//	if (message.channel.type != "dm") {
-		//		let newNick = args.slice(0).join(" ");
-		//		//if (guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
-		//		//if (1 == 1) {
-		//		//if ( message.guild.members.get(petID).hasPermission("MANAGE_NICKNAMES") && message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME") ) {
-		//		if (client.member.hasPermission("CHANGE_NICKNAME")) {
-		//			//message.guild.members.get(petID).setNickname(newNick);
-		//			message.channel.send(client.member.id);
-		//			message.channel.send("test");
-		//		} else {
-		//			message.channel.sendMessage("🛑 I do not have adequate permission..");
-		//		}
-		//	} else {
-		//		message.channel.sendMessage("❔ Trying to trip me up by asking me to set my nickname in a DM?");
-		//		setTimeout(() => {
-		//			message.channel.sendMessage("🏓 You better believe that's a paddlin'.");
-		//		}, 3000);
-		//	}
-		//}
-		
-		if (command === 'sayr') {
-			let sayChannel = args[0];
-			let text = args.slice(1).join(" ");
-			client.channels.get(sayChannel).sendMessage(text);
+			//case "mfk":
+			//	for (var i = 0; i < mfkFunctions.length; i++) {
+			//		message.channel.send('function Game.' + mfkFunctions[i] + '(...)\nHandleMFKFunction(0,10,"' + mfkFunctions[i] + '", ...)\nend');
+			//	}
+			//break;
+
+			case "stopmimic"
+				for (var i = 0; i < devs.length; i++) {
+					if (message.author.id == (devs[i])) {
+						isDev = 1;
+						if (mimicking==1) {
+							mimicking=0;
+							message.channel.sendMessage("❎ No longer mimicking.");
+						} else {
+							message.channel.sendMessage("❔ I wasn't mimicking anyone.");
+						}
+						break;
+					} else {
+						isDev = 0;
+					}
+				}
+				if (isDev == 0) {
+					message.channel.sendMessage("🛑 This is a developer-only command.");	
+				}
+				isDev = 0;
+				break;
+
+			case "mimictarget":
+				for (var i = 0; i < devs.length; i++) {
+					if (message.author.id == (devs[i])) {
+						isDev = 1;
+						if (mimicking==1) {
+							message.channel.sendMessage("✅ Currently mimicking <@" + mimicID + ">.");
+						} else {
+							message.channel.sendMessage("❔ I'm not mimicking anyone.");
+						}
+						break;
+					} else {
+						isDev = 0;
+					}
+				}
+				if (isDev == 0) {
+					message.channel.sendMessage("🛑 This is a developer-only command.");	
+				}
+				isDev = 0;
+				break;
+
+			case "haiku":
+				message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
+				break;
+
+			case "help":
+				message.channel.sendMessage({ embed });
+				break;
+
+			case "legacy":
+				message.channel.sendMessage("🛑 These commands are no longer supported.");
+				break;
+
+			case "vote":
+				if (voting == 0) {
+					voteUser = message.author.id;
+					voteTopic = args.slice(0).join(" ");
+					message.channel.sendMessage("✅ Vote now active: **" + voteTopic + "**");
+					voting = 1;
+					yesVote = 0;
+					noVote = 0;
+					//hasVoted.push(message.author.id);
+					hasVoted = [];
+				} else if (voting == 1) {
+					message.channel.sendMessage("🛑 There is already an active voting topic: **" + voteTopic + "**");
+				}
+				break;
+
+			case "endvote":
+				if (message.author.id == voteUser) {
+					voting = 0;
+					message.channel.sendMessage("✅ Vote complete: **" + voteTopic + "**\n\n Yes: " + yesVote + " No: " + noVote);
+					yesVote = 0;
+					noVote = 0;
+					hasVoted = [];
+				} else if (message.author.id != voteUser) {
+					message.channel.sendMessage("🛑 You did not initialise this vote.");
+				}
+				break;
+
+			case "yes":
+				for (var i = 0; i < hasVoted.length; i++) {
+					if (message.author.id == (hasVoted[i])) {
+						userVoted = 1;
+					} else {
+						userVoted = 0;
+					}
+				}
+				if (userVoted == 0) {
+				yesVote++;
+				hasVoted.push(message.author.id);
+				message.channel.sendMessage("✅ Your vote has been added.");
+				} else {
+					message.channel.sendMessage("🛑 You have already voted.");
+				}
+				break;
+
+			case "no":
+				for (var i = 0; i < hasVoted.length; i++) {
+					if (message.author.id == (hasVoted[i])) {
+						userVoted = 1;
+					} else {
+						userVoted = 0;
+					}
+				}
+				if (userVoted == 0) {
+				noVote++;	
+				hasVoted.push(message.author.id);
+				message.channel.sendMessage("✅ Your vote has been added.");
+				} else {
+					message.channel.sendMessage("🛑 You have already voted.");
+				}
+				break;
+
+			//case "nick":
+			//	if (message.channel.type != "dm") {
+			//		let newNick = args.slice(0).join(" ");
+			//		//if (guild.members.get(petID).hasPermission("CHANGE_NICKNAME")) {
+			//		//if (1 == 1) {
+			//		//if ( message.guild.members.get(petID).hasPermission("MANAGE_NICKNAMES") && message.guild.members.get(petID).hasPermission("CHANGE_NICKNAME") ) {
+			//		if (client.member.hasPermission("CHANGE_NICKNAME")) {
+			//			//message.guild.members.get(petID).setNickname(newNick);
+			//			message.channel.send(client.member.id);
+			//			message.channel.send("test");
+			//		} else {
+			//			message.channel.sendMessage("🛑 I do not have adequate permission.");
+			//		}
+			//	} else {
+			//		message.channel.sendMessage("❔ Trying to trip me up by asking me to set my nickname in a DM?");
+			//		setTimeout(() => {
+			//			message.channel.sendMessage("🏓 You better believe that's a paddlin'.");
+			//		}, 3000);
+			//	}
+			//	}
+			//	}
+			//	}
+			//	break;
+
+			case "sayr":
+				let sayChannel = args[0];
+				let text = args.slice(1).join(" ");
+				client.channels.get(sayChannel).sendMessage(text);
+				break;
+
+			case "say":
+				let text = args.slice(0).join(" ");
+				message.channel.sendMessage(text);
+				break;
+
+			//case "")
+			//	message.channel.sendMessage("❔ I don't recognize that command.");	
+			//	break;
+
+			case default:
+				message.channel.sendMessage("❔ I don't recognize that command.");	
+				break;
 		}
-		
-		if (command === 'say') {
-			let text = args.slice(0).join(" ");
-			message.channel.sendMessage(text);
-		}
-		
-		//if (command === '') {
-		//	message.channel.sendMessage("❔ I don't recognize that command.");	
-		//}
 	}
 });
 
