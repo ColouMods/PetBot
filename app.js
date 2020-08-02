@@ -37,7 +37,7 @@ client.on('message', message => {
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
 		switch(command) {
-			/*	
+				
 			case 'mimic':
 				if message.channel.type != "dm" {
 					if (message.mentions.users.size != 0) {
@@ -54,7 +54,7 @@ client.on('message', message => {
 					}
 				} else { message.channel.send("🛑 Can't mimic here."); }
 				break;
-		*/
+
 			case 'test':
 				message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
 				message.channel.sendMessage("userVote is currently " + userVoted);
@@ -67,7 +67,7 @@ client.on('message', message => {
 					//}, 1000);
 				}, 1000);
 				break;
-		/*
+
 			//case 'mfk':
 			//	for (var i = 0; i < mfkFunctions.length; i++) {
 			//		message.channel.send('function Game.' + mfkFunctions[i] + '(...)\nHandleMFKFunction(0,10,"' + mfkFunctions[i] + '", ...)\nend');
@@ -114,7 +114,7 @@ client.on('message', message => {
 				}
 				isDev = 0;
 				break;
-*/
+
 			case 'haiku':
 				message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
 				break;
