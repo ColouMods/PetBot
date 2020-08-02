@@ -57,11 +57,11 @@ client.on('message', message => {
 */
 			case 'mimic':
 				if message.channel.type != "dm" {
-					if (message.mentions.users.size != 0) {
-						message.channel.sendMessage("Test.");
-					} else {
-						message.channel.sendMessage("❔ You need to tell me who to mimic.");
-					}
+					//if (message.mentions.users.size != 0) {
+					//	message.channel.sendMessage("Test.");
+					//} else {
+					//	message.channel.sendMessage("❔ You need to tell me who to mimic.");
+					//}
 				} else { message.channel.send("🛑 Can't mimic here."); }
 				break;		
 			case 'test':
