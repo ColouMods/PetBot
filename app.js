@@ -51,7 +51,7 @@ client.on('message', message => {
 					} else {
 						message.channel.sendMessage("❔ You need to tell me who to mimic.");
 					}
-				} else {
+				} else if message.channel.type == "dm" {
 					message.channel.send("🛑 Can't mimic here.");
 				}
 				break;
