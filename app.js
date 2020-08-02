@@ -24,20 +24,19 @@ client.on('ready', () => {
 		client.user.setStatus('online');
 	}, 1000);
 });
-
+/*
 client.on('message', message => {
 	if (mimicking == 1 && message.author.id == mimicID) {
 		var mimicMsg = message.content;
 		message.channel.sendMessage(mimicMsg);
 	}
 });
-
+*/
 client.on('message', message => {
 	if (message.content.startsWith(prefix)) {
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
 		switch(command) {
-
 			case 'mimic':
 				if (message.channel.type != "dm") {
 					if (message.mentions.users.size != 0) {
@@ -54,13 +53,7 @@ client.on('message', message => {
 					}
 				} else { message.channel.send("🛑 Can't mimic here."); }
 				break;
-
-//			case 'mimic':
-//				if (message.channel.type != "dm") {
-//					message.channel.sendMessage("Test.");
-//				}
-//				break;
-
+				
 			case 'test':
 				message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
 				message.channel.sendMessage("userVote is currently " + userVoted);
@@ -73,12 +66,6 @@ client.on('message', message => {
 					//}, 1000);
 				}, 1000);
 				break;
-
-			//case 'mfk':
-			//	for (var i = 0; i < mfkFunctions.length; i++) {
-			//		message.channel.send('function Game.' + mfkFunctions[i] + '(...)\nHandleMFKFunction(0,10,"' + mfkFunctions[i] + '", ...)\nend');
-			//	}
-			//break;
 
 			case 'stopmimic':
 				for (var i = 0; i < devs.length; i++) {
@@ -193,7 +180,29 @@ client.on('message', message => {
 					message.channel.sendMessage("🛑 You have already voted.");
 				}
 				break;
-/*
+
+			//case 'sayr':
+			//	let sayChannel = args[0];
+			//	let text = args.slice(1).join(" ");
+			//	client.channels.get(sayChannel).sendMessage(text);
+			//	break;
+				
+			case 'say':
+				let text = args.slice(0).join(" ");
+				message.channel.sendMessage(text);
+				break;
+				
+			default:
+				message.channel.sendMessage("❔ I don't recognize that command.");	
+				break;
+						
+			//BROKEN OR UNNECESSARY
+			//case 'mfk':
+			//	for (var i = 0; i < mfkFunctions.length; i++) {
+			//		message.channel.send('function Game.' + mfkFunctions[i] + '(...)\nHandleMFKFunction(0,10,"' + mfkFunctions[i] + '", ...)\nend');
+			//	}
+			//break;
+				
 			//case 'nick':
 			//	if (message.channel.type != "dm") {
 			//		let newNick = args.slice(0).join(" ");
@@ -217,26 +226,15 @@ client.on('message', message => {
 			//	}
 			//	}
 			//	break;
-*/
-			//case 'sayr':
-			//	let sayChannel = args[0];
-			//	let text = args.slice(1).join(" ");
-			//	client.channels.get(sayChannel).sendMessage(text);
-			//	break;
 				
-			case 'say':
-				let text = args.slice(0).join(" ");
-				message.channel.sendMessage(text);
-				break;
-
 			//case '':
 			//	message.channel.sendMessage("❔ I don't recognize that command.");	
 			//	break;
-
-			default:
-				message.channel.sendMessage("❔ I don't recognize that command.");	
-				break;
 		}
+	}
+	if (mimicking == 1 && message.author.id == mimicID) {
+		var mimicMsg = message.content;
+		message.channel.sendMessage(mimicMsg);
 	}
 });
 
