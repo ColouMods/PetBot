@@ -229,7 +229,7 @@ client.on('message', message => {
 				//let sayChannel = args[0];
 				let text = args.slice(1).join(" ");
 				//client.channels.get(447499927220781068).sendMessage(text);
-				client.channels.find(447499927220781068).sendMessage(text);
+				//client.channels.find(447499927220781068).sendMessage(text);
 				break;
 
 			case 'say':
