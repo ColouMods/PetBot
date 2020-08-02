@@ -24,14 +24,14 @@ client.on('ready', () => {
 		client.user.setStatus('online');
 	}, 1000);
 });
-/*
+
 client.on('message', message => {
 	if (mimicking == 1 && message.author.id == mimicID) {
 		var mimicMsg = message.content;
 		message.channel.sendMessage(mimicMsg);
 	}
 });
-*/
+
 client.on('message', message => {
 	if (message.content.startsWith(prefix)) {
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -231,10 +231,6 @@ client.on('message', message => {
 			//	message.channel.sendMessage("❔ I don't recognize that command.");	
 			//	break;
 		}
-	}
-	if (mimicking == 1 && message.author.id == mimicID) {
-		var mimicMsg = message.content;
-		message.channel.sendMessage(mimicMsg);
 	}
 });
 
