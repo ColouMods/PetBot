@@ -218,11 +218,11 @@ client.on('message', message => {
 			//	}
 			//	break;
 */
-			case 'sayr':
-				let sayChannel = args[0];
-				let text = args.slice(1).join(" ");
-				client.channels.get(sayChannel).sendMessage(text);
-				break;
+			//case 'sayr':
+			//	let sayChannel = args[0];
+			//	let text = args.slice(1).join(" ");
+			//	client.channels.get(sayChannel).sendMessage(text);
+			//	break;
 
 			case 'say':
 				let text = args.slice(0).join(" ");
