@@ -37,7 +37,7 @@ client.on('message', message => {
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
 		switch(command) {
-			case "mimic":
+			/*case "mimic":
 				if message.channel.type != "dm" {
 					if (message.mentions.users.size != 0) {
 						member = message.mentions.users.first();
@@ -53,7 +53,7 @@ client.on('message', message => {
 					}
 				} else { message.channel.send("🛑 Can't mimic here."); }
 				break;
-
+			*/
 			case "test":
 				message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
 				message.channel.sendMessage("userVote is currently " + userVoted);
