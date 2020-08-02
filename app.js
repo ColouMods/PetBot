@@ -36,8 +36,6 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix)) {
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
-		message.channel.sendMessage(command);
-		/*
 		switch(command) {
 			case "mimic":
 				if message.channel.type != "dm" {
@@ -228,10 +226,10 @@ client.on('message', message => {
 			//	message.channel.sendMessage("❔ I don't recognize that command.");	
 			//	break;
 
-			case default:
+			default:
 				message.channel.sendMessage("❔ I don't recognize that command.");	
 				break;
-		}*/
+		}
 	}
 });
 
