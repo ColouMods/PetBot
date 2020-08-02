@@ -37,9 +37,9 @@ client.on('message', message => {
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
 		switch(command) {
-/*
+
 			case 'mimic':
-				if message.channel.type != "dm" {
+				if (message.channel.type != "dm") {
 					if (message.mentions.users.size != 0) {
 						member = message.mentions.users.first();
 						mimicID = member.id;
@@ -54,16 +54,13 @@ client.on('message', message => {
 					}
 				} else { message.channel.send("🛑 Can't mimic here."); }
 				break;
-*/
-			//case 'mimic':
-				//if message.channel.type != "dm" {
-					//if (message.mentions.users.size != 0) {
-					//	message.channel.sendMessage("Test.");
-					//} else {
-					//	message.channel.sendMessage("❔ You need to tell me who to mimic.");
-					//}
-				//} //else { message.channel.send("🛑 Can't mimic here."); }
-				//break;		
+
+//			case 'mimic':
+//				if (message.channel.type != "dm") {
+//					message.channel.sendMessage("Test.");
+//				}
+//				break;
+
 			case 'test':
 				message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
 				message.channel.sendMessage("userVote is currently " + userVoted);
