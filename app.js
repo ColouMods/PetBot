@@ -51,8 +51,7 @@ client.on('message', message => {
 					} else {
 						message.channel.sendMessage("❔ You need to tell me who to mimic.");
 					}
-				} else
-					message.channel.send("🛑 Can't mimic here.");
+				} else { message.channel.send("🛑 Can't mimic here."); }
 				break;
 
 			case "test":
