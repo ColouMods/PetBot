@@ -114,7 +114,7 @@ client.on('message', message => {
 				}
 				isDev = 0;
 				break;
-
+*/
 			case 'haiku':
 				message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
 				break;
@@ -187,7 +187,7 @@ client.on('message', message => {
 					message.channel.sendMessage("🛑 You have already voted.");
 				}
 				break;
-
+/*
 			//case 'nick':
 			//	if (message.channel.type != "dm") {
 			//		let newNick = args.slice(0).join(" ");
