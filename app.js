@@ -37,7 +37,7 @@ client.on('message', message => {
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 		const command = args.shift().toLowerCase();
 		switch(command) {
-				
+			/*	
 			case 'mimic':
 				if message.channel.type != "dm" {
 					if (message.mentions.users.size != 0) {
@@ -54,7 +54,7 @@ client.on('message', message => {
 					}
 				} else { message.channel.send("🛑 Can't mimic here."); }
 				break;
-		
+		*/
 			case 'test':
 				message.channel.sendMessage("hasVoted.length is currently " + hasVoted.length);
 				message.channel.sendMessage("userVote is currently " + userVoted);
@@ -67,7 +67,7 @@ client.on('message', message => {
 					//}, 1000);
 				}, 1000);
 				break;
-			
+		/*
 			//case 'mfk':
 			//	for (var i = 0; i < mfkFunctions.length; i++) {
 			//		message.channel.send('function Game.' + mfkFunctions[i] + '(...)\nHandleMFKFunction(0,10,"' + mfkFunctions[i] + '", ...)\nend');
@@ -226,7 +226,7 @@ client.on('message', message => {
 			//case '':
 			//	message.channel.sendMessage("❔ I don't recognize that command.");	
 			//	break;
-
+*/
 			default:
 				message.channel.sendMessage("❔ I don't recognize that command.");	
 				break;
