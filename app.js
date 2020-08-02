@@ -211,7 +211,7 @@ client.on('message', message => {
 			//	}
 			//	}
 			//	break;
-
+*/
 			case 'sayr':
 				let sayChannel = args[0];
 				let text = args.slice(1).join(" ");
@@ -226,7 +226,7 @@ client.on('message', message => {
 			//case '':
 			//	message.channel.sendMessage("❔ I don't recognize that command.");	
 			//	break;
-*/
+
 			default:
 				message.channel.sendMessage("❔ I don't recognize that command.");	
 				break;
