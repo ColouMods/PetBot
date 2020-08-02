@@ -75,7 +75,7 @@ client.on('message', message => {
 			//	}
 			//break;
 
-			case "stopmimic"
+			case "stopmimic":
 				for (var i = 0; i < devs.length; i++) {
 					if (message.author.id == (devs[i])) {
 						isDev = 1;
@@ -224,7 +224,7 @@ client.on('message', message => {
 				message.channel.sendMessage(text);
 				break;
 
-			//case "")
+			//case "":
 			//	message.channel.sendMessage("❔ I don't recognize that command.");	
 			//	break;
 
