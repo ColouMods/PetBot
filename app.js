@@ -109,9 +109,9 @@ client.on('message', message => {
 				break;
 
 			case 'haiku':
-   				var ln1 = Math.floor(Math.random() * h5.length)
-				var ln2 = Math.floor(Math.random() * h7.length)
-    				var ln3 = Math.floor(Math.random() * h5.length)
+   				var ln1 = Math.floor(Math.random() * h5.length);
+				var ln2 = Math.floor(Math.random() * h7.length);
+    				var ln3 = Math.floor(Math.random() * h5.length);
 				
     				if (ln3 == ln1) {
         				if (ln3 < h5.length) {
