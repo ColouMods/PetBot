@@ -330,7 +330,8 @@ h5 = [
 "Big Shaq is quite good",
 "Please don't burn my toast",
 "I do not like you",
-"Set me on fire"
+"Set me on fire",
+"I do not like sand"
 ];
 
 h7 = [
