@@ -326,7 +326,7 @@ h5 = [
 "Look, a piece of toast!",
 "Hey there, how are you?",
 "Two plus two is four",
-"Two plus two is five"
+"Two plus two is five",
 "I am not a horse",
 "I hate everyone",
 "You there, please send help",
@@ -356,7 +356,7 @@ h7 = [
 "Unforgettable luncheon",
 "**YOUR BATTERY HAS RUN LOW**",
 "Homer has eaten Mike's dog",
-"Coarse, rough, and irritating,"
+"Coarse, rough, and irritating",
 "This haiku is really bad",
 "This Kong has a funny face"
 ];
