@@ -357,7 +357,8 @@ h7 = [
 "Homer has eaten Mike's dog",
 "Coarse, rough, and irritating",
 "This haiku is really bad",
-"This Kong has a funny face"
+"This Kong has a funny face",
+"Every day, man's on the block"
 ];
 
 
