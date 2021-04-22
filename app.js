@@ -8,9 +8,6 @@ var yesVote = 0;
 var noVote = 0;
 var voteUser;
 var voteTopic;
-var ln1 = 0;
-var ln2 = 0;
-var ln3 = 0;
 hasVoted = [];
 userVoted = 0;
 
@@ -112,9 +109,9 @@ client.on('message', message => {
 				break;
 
 			case 'haiku':
-   				ln1 = Math.floor(Math.random() * h5.length);
-				ln2 = Math.floor(Math.random() * h7.length);
-    				ln3 = Math.floor(Math.random() * h5.length);
+   				var ln1 = Math.floor(Math.random() * h5.length);
+				var ln2 = Math.floor(Math.random() * h7.length);
+    				var ln3 = Math.floor(Math.random() * h5.length);
 				
     				if (ln3 == ln1) {
         				if (ln3 < h5.length) {
@@ -123,7 +120,7 @@ client.on('message', message => {
 						ln3--;
 				}
 				
-    				message.channel.sendMessage( h5[ln1] + "\n" + h7[ln2] + "\n" + h5[ln3] );
+    				message.channel.sendMessage(h5[ln1] + "\n" + h7[ln2] + "\n" + h5[ln3]);
 				//message.channel.sendMessage(h5[Math.floor(Math.random() * h5.length)] + "\n" + h7[Math.floor(Math.random() * h7.length)] + "\n" + h5[Math.floor(Math.random() * h5.length)]);
 				break;
 
