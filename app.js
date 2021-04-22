@@ -113,7 +113,7 @@ client.on('message', message => {
 				var l2 = Math.floor(Math.random() * h7.length)
     				var l3 = Math.floor(Math.random() * h5.length)
 				
-    				while (l3 == l1) {
+    				for (l3 == l1) {
         				var l3 = Math.floor(Math.random() * h5.length)
 				}
 				
