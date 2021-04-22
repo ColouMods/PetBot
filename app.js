@@ -109,7 +109,15 @@ client.on('message', message => {
 				break;
 
 			case 'haiku':
-				message.channel.sendMessage(h1[Math.floor(Math.random() * h1.length)] + "\n" + h2[Math.floor(Math.random() * h2.length)] + "\n" + h3[Math.floor(Math.random() * h3.length)]);
+   				var l1 = Math.floor(Math.random() * h5.length)
+				var l2 = Math.floor(Math.random() * h7.length)
+    				var l3 = Math.floor(Math.random() * h5.length)
+				
+    				while (l3 == l1) {
+        				var l3 = Math.floor(Math.random() * h5.length)
+				}
+				
+    				message.channel.sendMessage(h5[l1]+ "\n" + h7[l2] + "\n" + h5[l3]);
 				break;
 
 			case 'help':
@@ -300,7 +308,7 @@ lyrics2 = [
 "Fuck."
 ];
 
-h1 = [
+h5 = [
 "It's hip to fuck bees",
 "You fucking donut",
 "It's Liquid's birthday",
@@ -312,9 +320,20 @@ h1 = [
 "Hey there, how are you?",
 "Two plus two is four",
 "Two plus two is five"
+"I am not a horse",
+"I hate everyone",
+"You there, please send help",
+"I enjoy Smash Mouth",
+"Please don't eat my shorts",
+"Radical are dumb",
+"I like eating paste",
+"Big Shaq is quite good",
+"Please don't burn my toast",
+"I do not like you",
+"Set me on fire"
 ];
 
-h2 = [
+h7 = [
 "I don't like Loren Goodwin",
 "I am eating a baguette",
 "Sparrow Bot is annoying",
@@ -331,20 +350,6 @@ h2 = [
 "Homer has eaten Mike's dog",
 "This haiku is really bad",
 "This Kong has a funny face"
-];
-
-h3 = [
-"I am not a horse",
-"I hate everyone",
-"You there, please send help",
-"I enjoy Smash Mouth",
-"Please don't eat my shorts",
-"Radical are dumb",
-"I like eating paste",
-"Big Shaq is quite good",
-"Please don't burn my toast",
-"I do not like you",
-"Set me on fire"
 ];
 
 
