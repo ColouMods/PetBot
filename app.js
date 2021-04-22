@@ -124,7 +124,7 @@ client.on('message', message => {
 				//}
 				
     				//message.channel.sendMessage( h5[ln1] + "\n" + h7[ln2] + "\n" + h5[ln3] );
-				message.channel.sendMessage( h5[Math.floor(Math.random() * h5.length)] + "\n" + h7[Math.floor(Math.random() * h7.length)] + "\n" + h5[Math.floor(Math.random() * h5.length)] );
+				message.channel.sendMessage(h5[Math.floor(Math.random() * h5.length)] + "\n" + h7[Math.floor(Math.random() * h7.length)] + "\n" + h5[Math.floor(Math.random() * h5.length)]);
 				break;
 
 			case 'help':
