@@ -109,15 +109,18 @@ client.on('message', message => {
 				break;
 
 			case 'haiku':
-   				var l1 = Math.floor(Math.random() * h5.length)
-				var l2 = Math.floor(Math.random() * h7.length)
-    				var l3 = Math.floor(Math.random() * h5.length)
+   				var ln1 = Math.floor(Math.random() * h5.length)
+				var ln2 = Math.floor(Math.random() * h7.length)
+    				var ln3 = Math.floor(Math.random() * h5.length)
 				
-    				for (l3 == l1) {
-        				var l3 = Math.floor(Math.random() * h5.length)
+    				if (ln3 == ln1) {
+        				if (ln3 < h5.length) {
+						ln3++;
+					} else {
+						ln3--;
 				}
 				
-    				message.channel.sendMessage(h5[l1]+ "\n" + h7[l2] + "\n" + h5[l3]);
+    				message.channel.sendMessage(h5[ln1]+ "\n" + h7[ln2] + "\n" + h5[ln3]);
 				break;
 
 			case 'help':
@@ -349,6 +352,7 @@ h7 = [
 "Unforgettable luncheon",
 "**YOUR BATTERY HAS RUN LOW**",
 "Homer has eaten Mike's dog",
+"Coarse, rough, and irritating,"
 "This haiku is really bad",
 "This Kong has a funny face"
 ];
