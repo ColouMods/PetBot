@@ -318,7 +318,8 @@ lyrics2 = [
 h5 = [
 "It's hip to fuck bees",
 "You fucking donut",
-"It's Liquid's birthday",
+"It is my birthday",
+"It's not my birthday",
 "It's time for haikus",
 "I am feeling mad",
 "What are you doing?",
