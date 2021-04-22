@@ -358,7 +358,8 @@ h7 = [
 "Coarse, rough, and irritating",
 "This haiku is really bad",
 "This Kong has a funny face",
-"Every day, man's on the block"
+"Every day, man's on the block",
+"`ASK IAN ABOUT HAIKUS`"
 ];
 
 
