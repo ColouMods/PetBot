@@ -318,47 +318,10 @@ lyrics2 = [
 h5 = [
 "It's hip to fuck bees",
 "You fucking donut",
-"It's Liquid's birthday",
-"It's time for haikus",
-"I am feeling mad",
-"What are you doing?",
-"I am a lemon",
-"Look, a piece of toast!",
-"Hey there, how are you?",
-"Two plus two is four",
-"Two plus two is five"
-"I am not a horse",
-"I hate everyone",
-"You there, please send help",
-"I enjoy Smash Mouth",
-"Please don't eat my shorts",
-"Radical are dumb",
-"I like eating paste",
-"Big Shaq is quite good",
-"Please don't burn my toast",
-"I do not like you",
-"Set me on fire",
-"I do not like sand"
 ];
 
 h7 = [
 "I don't like Loren Goodwin",
-"I am eating a baguette",
-"Sparrow Bot is annoying",
-"Road Rage Returns is not good",
-"I drink from under the sink",
-"Cloou is a stupid bastard",
-"Eating is my favourite sport",
-"You don't microwave salads",
-"I have run out of haikus",
-"The world is gonna roll you",
-"Minus one that's three, quick maths",
-"Unforgettable luncheon",
-"**YOUR BATTERY HAS RUN LOW**",
-"Homer has eaten Mike's dog",
-"Coarse, rough, and irritating,"
-"This haiku is really bad",
-"This Kong has a funny face"
 ];
 
 
